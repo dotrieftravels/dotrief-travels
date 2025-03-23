@@ -1,90 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Dotrief Travels - Book Flights Easily</title>
-  <meta name="description" content="Dotrief Travels offers seamless flight bookings with the best deals." />
-  <meta name="keywords" content="flights, travel, book flights, airline tickets, cheap flights" />
-  <meta name="author" content="Dotrief Travels" />
-  <link rel="stylesheet" href="style.css" />
-
-  <style>
-    /* Reset styles */   
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dotrief Travels</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="logo.png" alt="Dotrief Travels Logo">
+            </div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#booking">Booking</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<!-- NAVIGATION BAR -->
-<nav class="navbar">
-  <!-- LOGO with Correct GitHub Raw Image URL -->
-  <a href="index.html">
-    <img 
-      src="https://raw.githubusercontent.com/dotrieftravels/dotrief-travels/main/Logo%20dotrief123.jpg"
-      alt="Dotrief Travels Logo"
-      class="logo"
-      onerror="this.onerror=null; this.src='fallback-logo.jpg';"
-    />
-  </a>
-</nav>
+    <section id="home">
+        <div class="hero">
+            <h1>Your Next Adventure Starts Here</h1>
+            <p>Discover the world’s most beautiful destinations with unbeatable deals.</p>
+            <a href="#quote" class="cta">Get a Free Quote</a>
+        </div>
+        
+        <div class="booking-iframe">
+            <iframe id="travelstartIframe" frameBorder="0" scrolling="auto"></iframe>
+        </div>
+    </section>
+    
+    <section id="destinations">
+        <h2>Explore Our Top Destinations</h2>
+        <div class="destination-grid">
+            <div class="destination">
+                <h3>Santorini, Greece</h3>
+                <p>Famous for its white-washed buildings and breathtaking sunsets.</p>
+            </div>
+            <div class="destination">
+                <h3>Bali, Indonesia</h3>
+                <p>From lush rice terraces to serene beaches, Bali is a paradise.</p>
+            </div>
+            <div class="destination">
+                <h3>Dubai, UAE</h3>
+                <p>Luxury, adventure, and innovation—Dubai offers thrilling experiences.</p>
+            </div>
+            <div class="destination">
+                <h3>Maldives</h3>
+                <p>Stay in an overwater bungalow and wake up to turquoise waters.</p>
+            </div>
+            <div class="destination">
+                <h3>Paris, France</h3>
+                <p>The City of Love is perfect for romantic getaways and art lovers.</p>
+            </div>
+        </div>
+    </section>
 
-<!-- HERO SECTION -->
-<section class="hero">
-  <h1>Welcome to Dotrief Travels</h1>
-  <p>Your one-stop solution for stress-free flight bookings!</p>
+    <section id="services">
+        <h2>Our Services</h2>
+        <ul>
+            <li>Flight Bookings</li>
+            <li>Hotel Reservations</li>
+            <li>Car Rentals</li>
+            <li>Cruise Packages</li>
+            <li>Visa Assistance</li>
+            <li>Travel Insurance</li>
+        </ul>
+    </section>
 
-  <img
-    src="https://raw.githubusercontent.com/dotrieftravels/dotrief-travels/main/beach-homepage.jpg"
-    alt="Travel the world with Dotrief Travels"
-    class="hero-image"
-  />
-</section>
+    <section id="about">
+        <h2>Dotrief Travels - Your Ultimate Online Travels</h2>
+        <p>Welcome to Dotrief Travels, your trusted online travel agency...</p>
+    </section>
 
-<!-- MAIN CONTENT -->
-<div class="container">
-        <h1>Book Your Flight</h1>
-        <div id='logs'></div> 
-        <iframe id='travelstartIframe' frameBorder='0' scrolling='auto' style='margin: 0px; padding: 0px; background-color: #fafafa;'></iframe>
-        <div class='spin'></div>
-    </div>
+    <section id="contact">
+        <h2>Let’s Plan Your Next Trip!</h2>
+        <p>Email: dotrieftravels@gmail.com</p>
+        <p>Phone: +2348163412070</p>
+        <p>WhatsApp: <a href="https://wa.me/2348144967586">Click here to chat</a></p>
+    </section>
 
-    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js' type='text/javascript'></script>
-    <script type='text/javascript'> 
-        var travelstartIframeId = 'travelstartIframe';
-        var iframeUrl = 'https://www.travelstart.com.ng';
-        var affId = '219440';
-        var iframe = $('#' + travelstartIframeId);
-        var iframeParams = [
-            'affId=' + affId,
-            'utm_source=affiliate',
-            'utm_medium=' + affId,
-            'isiframe=true',
-            'iframeVersion=11',
-            'host=' + window.location.href.split('?')[0]
-        ];
-        var newIframeUrl = iframeUrl + ('/?search=false') + '&' + iframeParams.join('&');
-        iframe.attr('src', newIframeUrl);
-
-        window.addEventListener('message', function(e) {
-            var eventName = e.data[0];
-            var data = e.data[1];
-            if (eventName === 'setHeight') {
-                iframe.height(data);
-            }
-        }, false);
-
-        jQuery('#' + travelstartIframeId).ready(function () {
-            $('.spin').css('display', 'none');
-        });
-        jQuery('#' + travelstartIframeId).load(function () {
-            $('.spin').css('display', 'none');
-        });
-    </script>
-
-<!-- FOOTER -->
-<footer>
-  &copy; 2024 Dotrief Travels. All rights reserved.
-</footer>
-
+    <footer>
+        <p>&copy; 2024 Dotrief Travels. All Rights Reserved.</p>
+        <div class="social-links">
+            <a href="https://www.instagram.com/dotrieftravels"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/dotrieftravels.net"><i class="fab fa-facebook"></i></a>
+            <a href="https://twitter.com/dotrieftravels"><i class="fab fa-twitter"></i></a>
+        </div>
+    </footer>
 </body>
 </html>
