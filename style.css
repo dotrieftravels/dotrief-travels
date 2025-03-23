@@ -27,13 +27,19 @@ nav a:hover {
 }
 
 /* HEADER */
-div {
+ /*
     background: url('images/header-bg.jpg') no-repeat center center/cover;
     height: 300px;
     color: white;
     text-align: center;
     padding-top: 120px;
-    font-size: 28px;
+    font-size: 28px;*/
+}
+.hero img {
+    width: 100%; /* Makes the image responsive */
+    max-height: 400px; /* Keeps a good height */
+    object-fit: cover; /* Ensures image looks great */
+    border-radius: 10px; /* Adds smooth corners */
 }
 
 .hero {
