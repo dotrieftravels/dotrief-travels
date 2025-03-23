@@ -11,18 +11,33 @@
   
   <!-- Quick inline style for demonstration (recommended to place in style.css) -->
   <style>
-    /* Make images responsive */
-    .hero img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-      margin: 0 auto; /* centers the image */
+    /* Basic resets and responsive styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
     
-    /* Center hero text */
+    /* Hero section styles */
     .hero {
       text-align: center;
       padding: 1rem;
+    }
+
+    /* Logo styling: adjust width as needed */
+    .hero img.logo {
+      max-width: 150px;
+      height: auto;
+      display: block;
+      margin: 0 auto 1rem; /* centers and adds space below logo */
+    }
+
+    /* Make the hero image responsive */
+    .hero img.hero-image {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
     }
     
     /* Container for main content */
@@ -58,7 +73,7 @@
 </head>
 <body>
 
-<!-- NAVIGATION MENU (uncomment if you want it visible)
+<!-- NAVIGATION MENU (uncomment if you want a nav bar)
 <nav>
   <a href="index.html">Home</a>
   <a href="about.html">About</a>
@@ -70,11 +85,21 @@
 
 <!-- HEADER / HERO SECTION -->
 <header class="hero">
+  <!-- LOGO -->
+  <img 
+    src="images/dotrief-logo.jpg" 
+    alt="Dotrief Travels Logo"
+    class="logo"
+  />
+  
   <h1>Welcome to Dotrief Travels</h1>
   <p>Your one-stop solution for stress-free flight bookings!</p>
+  
+  <!-- HERO IMAGE -->
   <img
     src="https://raw.githubusercontent.com/dotrieftravels/dotrief-travels/main/beach-homepage.jpg"
     alt="Travel the world with Dotrief Travels"
+    class="hero-image"
   />
 </header>
 
