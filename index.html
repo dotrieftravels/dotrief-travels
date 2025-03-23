@@ -8,7 +8,97 @@
   <meta name="keywords" content="flights, travel, book flights, airline tickets, cheap flights" />
   <meta name="author" content="Dotrief Travels" />
   <link rel="stylesheet" href="style.css" />
-   </style>
+
+  <!-- Inline CSS for demonstration (Recommended: put these rules in style.css) -->
+  <style>
+    /* Basic resets and typography */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    /* NAVBAR */
+    nav.navbar {
+      display: flex;
+      align-items: center;
+      padding: 0.5rem 1rem;
+      background-color: #f5f5f5; /* Light background, adjust as needed */
+    }
+    /* Logo on the top-left */
+    .navbar .logo {
+      max-width: 80px; /* Adjust size as needed */
+      height: auto;
+      margin-right: 1rem; /* Spacing between logo and nav links */
+    }
+    /* Optional nav links (if you decide to have them) */
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      margin-left: auto; /* pushes links to the right */
+    }
+    .navbar ul li {
+      margin-left: 1rem;
+    }
+    .navbar ul li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+
+    /* HERO SECTION */
+    .hero {
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+    .hero h1 {
+      margin-bottom: 0.5rem;
+    }
+    .hero p {
+      margin-bottom: 1.5rem;
+    }
+    /* Hero image: responsive */
+    .hero img.hero-image {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+
+    /* MAIN CONTENT */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1rem;
+    }
+    .iframe-container {
+      position: relative;
+      width: 100%;
+      padding-bottom: 56.25%; /* 16:9 aspect ratio */
+      height: 0;
+      overflow: hidden;
+      margin-top: 1rem;
+    }
+    .iframe-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #f5f5f5;
+      margin-top: 2rem;
+    }
+  </style>
 </head>
 <body>
 
@@ -17,13 +107,13 @@
   <!-- LOGO: Ensure this path is correct and points to your image location -->
   <a href="index.html">
     <img
-      src="https://raw.githubusercontent.com/dotrieftravels/dotrief-travels/main/dotrief-logo.jpeg"
+      src="https://raw.githubusercontent.com/dotrieftravels/dotrief-travels/main/dotrief-logo.jpg"
       alt="Dotrief Travels Logo"
       class="logo"
     />
   </a>
 
-   <!--UNCOMMENT IF YOU WANT NAV LINKS-->
+  <!-- UNCOMMENT IF YOU WANT NAV LINKS
   <ul>
     <li><a href="index.html">Home</a></li>
     <li><a href="about.html">About</a></li>
@@ -31,18 +121,19 @@
     <li><a href="booking.html">Booking</a></li>
     <li><a href="contact.html">Contact</a></li>
   </ul>
-  
+  -->
 </nav>
 
 <!-- HERO SECTION -->
 <section class="hero">
+  <h1>Welcome to Dotrief Travels</h1>
+  <p>Your one-stop solution for stress-free flight bookings!</p>
+
   <img
     src="https://raw.githubusercontent.com/dotrieftravels/dotrief-travels/main/beach-homepage.jpg"
     alt="Travel the world with Dotrief Travels"
     class="hero-image"
   />
-   <h1>Welcome to Dotrief Travels</h1>
-  <p>Your one-stop solution for stress-free flight bookings!</p>
 </section>
 
 <!-- MAIN CONTENT -->
