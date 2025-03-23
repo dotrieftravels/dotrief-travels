@@ -7,74 +7,37 @@ body {
     color: #333;
 }
 
-/* NAVIGATION BAR */
-nav {
-    background-color: #004080;
-    padding: 15px;
-    text-align: center;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    padding: 15px 20px;
-    font-size: 18px;
-}
-
-nav a:hover {
-    background-color: #003366;
-    border-radius: 5px;
-}
-
-/* HEADER */
- /*
-    background: url('images/header-bg.jpg') no-repeat center center/cover;
-    height: 300px;
-    color: white;
-    text-align: center;
-    padding-top: 120px;
-    font-size: 28px;*/
-}
-.hero img {
-    width: 100%; /* Makes the image responsive */
-    max-height: 400px; /* Keeps a good height */
-    object-fit: cover; /* Ensures image looks great */
-    border-radius: 10px; /* Adds smooth corners */
-}
-
-.hero {
-    text-align: center;
-    padding: 40px 20px;
-    background-color: #f4f4f4; /* Light background for contrast */
-}
-
-.hero h1 {
-    font-size: 2.5rem;
-    color: #333;
-    margin-bottom: 10px;
-}
-
-/* CONTENT BOX */
-.container {
-    max-width: 1000px;
-    margin: auto;
-    padding: 20px;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
     body {
       font-family: Arial, sans-serif;
     }
-    /* Logo on the top-left */
-    .navbar .logo {
-      max-width: 80px; /* Adjust size as needed */
-      height: auto;
-      margin-right: 1rem; /* Spacing between logo and nav links */
+
+    /* NAVIGATION BAR */
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.8rem 1rem;
+      background-color: #f5f5f5;
     }
-    
-    /* Hero image: responsive */
+
+    /* LOGO STYLES */
+    .navbar .logo {
+      max-width: 120px;
+      height: auto;
+    }
+
+    /* HERO SECTION */
+    .hero {
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    /* HERO IMAGE */
     .hero img.hero-image {
       max-width: 100%;
       height: auto;
@@ -83,13 +46,14 @@ nav a:hover {
     }
 
     /* MAIN CONTENT */
-   /* .container {
+    /*.container {
       max-width: 1200px;
       margin: 0 auto;
       padding: 1rem;
-    }*/
-   
+    */
 
+    /* RESPONSIVE IFRAME */
+    
     /* FOOTER */
     footer {
       text-align: center;
@@ -97,4 +61,3 @@ nav a:hover {
       background-color: #f5f5f5;
       margin-top: 2rem;
     }
- 
