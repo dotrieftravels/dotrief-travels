@@ -8,46 +8,72 @@
   <meta name="keywords" content="flights, travel, book flights, airline tickets, cheap flights" />
   <meta name="author" content="Dotrief Travels" />
   <link rel="stylesheet" href="style.css" />
-  
-  <!-- Quick inline style for demonstration (recommended to place in style.css) -->
+
+  <!-- Inline styles for quick fixes (move to style.css for production) -->
   <style>
-    /* Basic resets and responsive styles */
+    /* Basic resets */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
-    
-    /* Hero section styles */
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    /* NAVIGATION BAR */
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.8rem 1rem;
+      background-color: #f5f5f5; /* Light background */
+    }
+
+    /* LOGO STYLES */
+    .navbar .logo {
+      max-width: 120px; /* Adjust size as needed */
+      height: auto;
+    }
+
+    /* NAVIGATION LINKS */
+    .navbar ul {
+      list-style: none;
+      display: flex;
+    }
+
+    .navbar ul li {
+      margin-left: 1.5rem;
+    }
+
+    .navbar ul li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+
+    /* HERO SECTION */
     .hero {
       text-align: center;
-      padding: 1rem;
+      padding: 2rem 1rem;
     }
 
-    /* Logo styling: adjust width as needed */
-    .hero img.logo {
-      max-width: 150px;
-      height: auto;
-      display: block;
-      margin: 0 auto 1rem; /* centers and adds space below logo */
-    }
-
-    /* Make the hero image responsive */
+    /* HERO IMAGE */
     .hero img.hero-image {
       max-width: 100%;
       height: auto;
       display: block;
       margin: 0 auto;
     }
-    
-    /* Container for main content */
+
+    /* CONTAINER */
     .container {
       max-width: 1200px;
       margin: 0 auto;
       padding: 1rem;
     }
-    
-    /* Make iframe responsive */
+
+    /* RESPONSIVE IFRAME */
     .iframe-container {
       position: relative;
       width: 100%;
@@ -55,7 +81,7 @@
       height: 0;
       overflow: hidden;
     }
-    
+
     .iframe-container iframe {
       position: absolute;
       top: 0;
@@ -64,50 +90,59 @@
       height: 100%;
       border: 0;
     }
-    
+
+    /* FOOTER */
     footer {
       text-align: center;
       padding: 1rem;
+      background-color: #f5f5f5;
+      margin-top: 2rem;
     }
+
   </style>
 </head>
 <body>
 
-<!-- NAVIGATION MENU (uncomment if you want a nav bar)
-<nav>
-  <a href="index.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="services.html">Services</a>
-  <a href="booking.html">Booking</a>
-  <a href="contact.html">Contact</a>
-</nav>
--->
+<!-- NAVIGATION BAR -->
+<nav class="navbar">
+  <!-- LOGO: Ensure this path is correct -->
+  <a href="index.html">
+    <img 
+      src="https://raw.githubusercontent.com/dotrieftravels/dotrief-travels/main/dotrief-logo.jpg"
+      alt="Dotrief Travels Logo"
+      class="logo"
+    />
+  </a>
 
-<!-- HEADER / HERO SECTION -->
-<header class="hero">
-  <!-- LOGO -->
-  <img 
-    src="images/dotrief-logo.jpg" 
-    alt="Dotrief Travels Logo"
-    class="logo"
-  />
-  
+  <!-- UNCOMMENT TO ADD NAVIGATION LINKS -->
+  <!--
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="booking.html">Booking</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  -->
+</nav>
+
+<!-- HERO SECTION -->
+<section class="hero">
   <h1>Welcome to Dotrief Travels</h1>
   <p>Your one-stop solution for stress-free flight bookings!</p>
-  
-  <!-- HERO IMAGE -->
+
   <img
     src="https://raw.githubusercontent.com/dotrieftravels/dotrief-travels/main/beach-homepage.jpg"
     alt="Travel the world with Dotrief Travels"
     class="hero-image"
   />
-</header>
+</section>
 
 <!-- MAIN CONTENT -->
 <div class="container">
   <h2>Flight Booking</h2>
   <p>Find the best flight deals with ease.</p>
-  
+
   <div class="iframe-container">
     <iframe src="https://www.travelstart.com.ng"></iframe>
   </div>
