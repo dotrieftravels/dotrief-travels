@@ -14,7 +14,7 @@ nav {
     text-align: center;
 }
 
-/*nav a {
+nav a {
     color: white;
     text-decoration: none;
     padding: 15px 20px;
@@ -24,7 +24,7 @@ nav {
 nav a:hover {
     background-color: #003366;
     border-radius: 5px;
-}*/
+}
 
 /* HEADER */
  /*
@@ -83,13 +83,13 @@ iframe {
 }
 
 /* FOOTER */
-footer {
+/*footer {
     background-color: #004080;
     color: white;
     text-align: center;
     padding: 15px;
     margin-top: 20px;
-}
+}/*
 
 <!-- Inline CSS for demonstration (Recommended: put these rules in style.css) -->
   <style>
