@@ -62,7 +62,7 @@ body {
     width: 80%;
     margin: auto;
     overflow: hidden;
-}*/
+}
 
 /* Header */
 header {
@@ -73,8 +73,8 @@ header {
     border-bottom: #77A6F7 3px solid;
 }
 header h1 {
-    float: left;
-    margin: 0;
+   /* float: left;
+    margin: 0;*/
 }
 
 header nav {
