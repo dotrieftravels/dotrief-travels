@@ -138,6 +138,29 @@ nav a:hover {
   gap: 15px;
   max-width: 600px;
 }*/
+#quote {
+  background-color: #e8f0fe; /* Soft blue-gray for a calm feel */
+  padding: 60px 20px;
+  text-align: center;
+}
+
+#quote h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #1c87c9;
+}
+
+#quote p {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 30px;
+}
+
+.form-wrapper iframe {
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  max-width: 100%;
+}
 
 input, textarea {
   padding: 10px;
