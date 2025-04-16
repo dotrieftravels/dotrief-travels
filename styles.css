@@ -132,12 +132,12 @@ nav a:hover {
 }
 
 /* Form Section */
-form {
+/*form {
   display: flex;
   flex-direction: column;
   gap: 15px;
   max-width: 600px;
-}
+}*/
 
 input, textarea {
   padding: 10px;
