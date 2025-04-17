@@ -44,7 +44,7 @@ h1, h2, h3 {
   align-items: center;
   background-color: #007bff;
   padding: 10px 20px;
-}*/
+}
 
 .logo {
   height: 50px;
@@ -67,7 +67,84 @@ nav a {
 
 nav a:hover {
   color: #ffeb3b;
+}*/
+/* Sticky navbar */
+.main-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  width: 100%;
 }
+
+/* Logo */
+.logo img {
+  height: 50px;
+}
+
+/* Navbar layout */
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 30px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #1c87c9;
+  font-weight: bold;
+}
+
+/* Hamburger icon */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: #1c87c9;
+  display: block;
+  border-radius: 2px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  nav {
+    display: none;
+    width: 100%;
+  }
+
+  nav.show {
+    display: block;
+    background-color: white;
+    position: absolute;
+    top: 65px;
+    left: 0;
+    padding: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
 
 /* Hero Section */
 .hero {
