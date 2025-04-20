@@ -216,10 +216,36 @@ footer {
 }
 
 #about {
-  background-color: #ffffff; /* Classic white */
+ /* background-color: #ffffff; /* Classic white */
   padding: 60px 20px;
+  background-color: #f9f9f9; /* Soft light background */
+  color: #333;
+  text-align: center;
 }
 
+#about h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #007bff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+#about p {
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.8;
+  color: #555;
+  padding: 0 10px;
+}
+
+@media (max-width: 768px) {
+  #about p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
 #services {
   background-color: #fdf6f0; /* Gentle peach */
   padding: 60px 20px;
