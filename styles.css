@@ -406,4 +406,49 @@ nav a {
     gap: 15px;
     text-align: center;
   }*/
+/* Sticky Navbar */
+.nav-wrapper {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #007bff;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: white;
+  border-radius: 2px;
+}
+
+/* Mobile Navigation */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    background-color: #007bff;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    width: 200px;
+    display: none;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
 
