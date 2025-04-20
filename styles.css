@@ -24,10 +24,10 @@ h1, h2, h3 {
   color: #1c87c9;
   margin-bottom: 20px;
 }
-.nav-wrapper, .hero-wrapper {
+/*.nav-wrapper, .hero-wrapper {
   width: 100%;
   background-color: #007bff; /* or use white if you prefer */
-}
+}*/
 
 .nav-container {
   max-width: 1200px;
@@ -330,6 +330,52 @@ section h2 {
     text-align: center;
   }
 /*Sticky navbar */
+.nav-wrapper {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #007bff;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: white;
+  border-radius: 2px;
+}
+
+/* Mobile Navigation */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    background-color: #007bff;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    width: 200px;
+    display: none;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+
+  
 /*.main-header {
   position: sticky;
   top: 0;
@@ -407,48 +453,6 @@ nav a {
     text-align: center;
   }*/
 /* Sticky Navbar */
-.nav-wrapper {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  background-color: #007bff;
-}
 
-/* Hamburger Menu */
-.hamburger {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  gap: 5px;
-}
-
-.hamburger span {
-  width: 25px;
-  height: 3px;
-  background: white;
-  border-radius: 2px;
-}
-
-/* Mobile Navigation */
-@media (max-width: 768px) {
-  nav ul {
-    flex-direction: column;
-    background-color: #007bff;
-    position: absolute;
-    top: 60px;
-    right: 20px;
-    width: 200px;
-    display: none;
-    padding: 10px;
-    border-radius: 5px;
-  }
-
-  nav ul.show {
-    display: flex;
-  }
-
-  .hamburger {
-    display: flex;
-  }
 }
 
