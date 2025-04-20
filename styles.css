@@ -199,12 +199,14 @@ button[type="submit"]:hover {
 }
 
 .social-links a {
-  color: #007bff;
   margin: 0 10px;
-  font-size: 20px;
-  transition: color 0.3s;
+  color: #0077b5;
+  font-size: 1.5rem;
+  gap: 15px;
+  display:flex;
+  justify-content: center;
+  transition: color 0.3s ease;
 }
-
 .social-links a:hover {
   color: #1c87c9;
 }
@@ -216,6 +218,15 @@ footer {
   padding: 20px 0;
   margin-top: 40px;
 }
+/*footer .social-links {
+    color: #0077b5;
+    font-size: 1.5rem;
+    gap: 15px;
+    display:flex;
+    justify-content: center;
+    transition: color 0.3s ease;
+}*/
+
 
 /* === Section Background Colors === */
   /*.hero {
