@@ -24,11 +24,18 @@ h1, h2, h3 {
   color: #1c87c9;
   margin-bottom: 20px;
 }
-.nav-wrapper, .hero-wrapper {
+.nav-wrapper {
   width: 100%;
   background-color: #007bff; /* or use white if you prefer */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #007bff;
 }
-
+.hero-wrapper {
+   width: 100%;
+  background-color: #007bff; 
+}
 .nav-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -331,11 +338,11 @@ section h2 {
   }
 /*Sticky navbar */
 .nav-wrapper {
-  position: sticky;
+ /* position: sticky;
   top: 0;
   z-index: 1000;
   background-color: #007bff;
-}
+}*/
 
 /* Hamburger Menu */
 .hamburger {
