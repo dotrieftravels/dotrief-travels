@@ -245,6 +245,9 @@ section h2 {
 
 .service-item:hover {
   transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(28, 135, 201, 0.2);
+}
+
 }
 
 .service-item h3 {
