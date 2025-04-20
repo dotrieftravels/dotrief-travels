@@ -11,195 +11,120 @@
   <meta name="fo-verify" content="c1ed1ce8-a4e9-42e4-97a9-5ce129037c42"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="styles.css">
-  <style>
-  html {
-    scroll-behavior: smooth;
-  }
-</style>
 </head>
 <body>
-  <header id="main-header" class="nav-wrapper">
+  <!-- NAVIGATION BAR -->
+  <div class="nav-wrapper">
     <div class="nav-container">
-      <img src="https://raw.githubusercontent.com/dotrieftravels/dotrief-travels/main/Logo dotrief123.jpg" alt="Dotrief Travels Logo" class="logo">
-      <div class="harmburger" id="harmburger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
+      <img src="your-logo.png" alt="Dotrief Logo" class="logo" />
       <nav>
-        <ul id="nav-links">
+        <ul>
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#services">Services</a></li>
           <li><a href="#booking">Booking</a></li>
-          <li><a href="#destinations">Destinations</a></li>
-           <li><a href="#get a quote">Get a quote</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
     </div>
-  </header>
+  </div>
 
-  <section class="hero">
+  <!-- HERO SECTION -->
+  <section class="hero" id="home">
     <div class="hero-wrapper">
-    <video class="hero-video" autoplay muted loop">
-      <source src="https://raw.githubusercontent.com/dotrieftravels/dotrief-travels/main/homepage-video.mp4" type="Travel the world with dotrief travels">
-      Your browser does not support the video tag.
-    </video>
+      <video class="hero-video" autoplay muted loop>
+        <source src="your-video.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <img src="your-fallback.jpg" alt="Travel the world" class="fallback-img" />
     </div>
     <h1>Welcome to Dotrief Travels</h1>
   </section>
 
+  <!-- ABOUT SECTION -->
   <section id="about" class="container">
     <h2>About Us</h2>
-  <p>
-    At <strong>Dotrief Travels</strong>, we believe travel should be exciting, effortless, and truly unforgettable.
-    We specialize in simplifying flight bookings and crafting seamless travel experiences for individuals,
-    families, and businesses across the globe.
-  </p>
-  <p>
-    With access to a vast network of airlines and the latest travel tools, we provide real-time deals, 
-    responsive support, and a smooth booking experience from start to finish. Whether you're planning a 
-    relaxing vacation, an urgent business trip, or a spontaneous escape, Dotrief Travels is here to get 
-    you there — quickly and confidently.
-  </p>
-  <p>
-    Driven by passion, powered by technology, and anchored in trust — we’re not just helping you book flights;
-    we’re helping you create lasting memories. Let’s take you places.
-  </p>
-</section>
-  
-<section id="services" class="container">
-  <h2>Our Travel Services</h2>
-  <p>
-    At <strong>Dotrief Travels</strong>, we provide a comprehensive range of travel solutions designed to make your journey smooth, safe, and memorable. Our services combine technology, expertise, and personalized attention to meet your travel needs — whether for business, leisure, or group tours.
-  </p>
+    <p>Dotrief Travels is your trusted partner for seamless flight bookings and unforgettable travel experiences. We are committed to providing the best deals and reliable services.</p>
+  </section>
 
-  <div class="services-grid">
-    <div class="service-item">
-      <h3>Flight Bookings</h3>
-      <p>
-        Enjoy hassle-free flight reservations to any destination worldwide. We partner with major airlines to offer competitive fares, flexible options, and real-time availability — so you always get the best deal.
-      </p>
-    </div>
+  <!-- SERVICES SECTION -->
+  <section id="services" class="container">
+    <h2>Our Services</h2>
+    <ul>
+      <li>Flight Bookings</li>
+      <li>Hotel Reservations</li>
+      <li>Visa Assistance</li>
+      <li>Tour Packages</li>
+    </ul>
+  </section>
 
-    <div class="service-item">
-      <h3>Visa Assistance</h3>
-      <p>
-        Our experienced team provides up-to-date visa guidance, document verification, and embassy interview support. We help you navigate visa processes smoothly for tourist, business, or student travel.
-      </p>
+  <!-- DESTINATIONS SECTION -->
+  <section id="destinations" class="container">
+    <h2>Top Destinations</h2>
+    <div class="destination">
+      <img src="paris.jpg" alt="Paris" />
+      <h3>Paris, France</h3>
+      <p>Experience the city of love and lights. Book your unforgettable getaway today!</p>
+      <a href="#booking" class="btn">Book Now</a>
     </div>
+    <div class="destination">
+      <img src="dubai.jpg" alt="Dubai" />
+      <h3>Dubai, UAE</h3>
+      <p>Luxury shopping, ultramodern architecture, and vibrant nightlife. Let’s go!</p>
+      <a href="#booking" class="btn">Book Now</a>
+    </div>
+  </section>
 
-    <div class="service-item">
-      <h3>Holiday Packages</h3>
-      <p>
-        From romantic getaways to family vacations and group tours, we create customized holiday packages that fit your budget and lifestyle. Discover top destinations with curated itineraries and exclusive deals.
-      </p>
-    </div>
-
-    <div class="service-item">
-      <h3>Travel Insurance</h3>
-      <p>
-        Travel with peace of mind. We provide reliable travel insurance options that cover medical emergencies, cancellations, baggage loss, and more — so you’re protected every step of the way.
-      </p>
-    </div>
-
-    <div class="service-item">
-      <h3>Hotel Reservations</h3>
-      <p>
-        Book from a wide selection of hotels, resorts, and accommodations around the world. Whether you need luxury, comfort, or affordability, we help you find the perfect place to stay.
-      </p>
-    </div>
-
-    <div class="service-item">
-      <h3>Airport Transfers</h3>
-      <p>
-        Start and end your trip in comfort with reliable airport pickup and drop-off services. We arrange safe and timely transfers for solo travelers, families, and groups.
-      </p>
-    </div>
-  </div>
-</section>
-  <section id="booking" class="container">
-    <h2>Book Your Flight</h2>
-    <div id='logs'></div>
-    <div class='spin'></div>
+  <!-- BOOKING SECTION (iframe stays intact) -->
+  <section id="booking" style="margin: 0; padding: 0;">
     <iframe
-  id="travelstartIframe"
-  frameBorder="0"
-  scrolling="auto"
-  style="margin: 0px; padding: 0px; background-color: #fafafa; width: 100vw; height: 100vh; border: none;">
+      id="travelstartIframe"
+      frameBorder="0"
+      scrolling="auto"
+      style="margin: 0px; padding: 0px; background-color: #fafafa; width: 100vw; height: 100vh; border: none;">
     </iframe>
     <div class="spin"></div>
   </section>
 
-  <section id="destinations" class="container">
-    <h2>Top Destinations</h2>
-    <div class="destination">
-      <img src="paris.jpg" alt="Paris">
-      <div class="description">
-        <h3>Paris</h3>
-        <p>Experience the romantic city of lights.</p>
-        <button>Book Now</button>
-      </div>
-    </div>
-    <div class="destination">
-      <img src="dubai.jpg" alt="Dubai">
-      <div class="description">
-        <h3>Dubai</h3>
-        <p>Explore the luxury and innovation of Dubai.</p>
-        <button>Book Now</button>
-      </div>
-    </div>
+  <!-- GOOGLE FORM -->
+  <section id="form" class="container">
+    <h2>Travel Inquiry</h2>
+    <iframe src="https://docs.google.com/forms/d/e/YOUR_GOOGLE_FORM_LINK/viewform?embedded=true" width="100%" height="800" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
   </section>
 
- <section id="quote" class="container">
-  <h2>Get a Quote</h2>
-  <p>Fill out the form below and we'll get back to you with the best travel options tailored to your needs.</p>
-  
-  <div class="form-wrapper">
-    <iframe 
-      src="https://forms.gle/YAe8b9HqtYHLfonF7" 
-      width="100%" 
-      height="800" 
-      frameborder="0" 
-      marginheight="0" 
-      marginwidth="0"
-      loading="lazy"
-      title="Get a Quote Form">
-      Loading…
-    </iframe>
-  </div>
-</section>
-
-
+  <!-- YOUTUBE SECTION -->
   <section id="youtube" class="container">
-    <h2>Watch Our YouTube Video</h2>
-    <iframe width="100%" height="400" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+    <h2>Watch Our Travel Tips</h2>
+    <div class="video-container">
+      <iframe width="100%" height="400" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+    </div>
   </section>
 
+  <!-- CONTACT FORM -->
   <section id="contact" class="container">
     <h2>Contact Us</h2>
-    <form action="#" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" placeholder="Your Message" required></textarea>
+    <form action="mailto:dotrieftravels@gmail.com" method="post" enctype="text/plain">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
       <button type="submit">Send Message</button>
     </form>
   </section>
 
+  <!-- FOOTER -->
   <footer>
     <p>&copy; 2024 Dotrief Travels. All Rights Reserved.</p>
     <p>Email: dotrieftravels@gmail.com | Phone: +2348163412070</p>
-    <div class="social-links">
+    <div class="social-icons">
       <a href="https://www.linkedin.com/in/dotrieftravels" target="_blank"><i class="fab fa-linkedin"></i></a>
       <a href="https://www.facebook.com/dotrieftravels.net" target="_blank"><i class="fab fa-facebook"></i></a>
       <a href="https://wa.me/2348144967586" target="_blank"><i class="fab fa-whatsapp"></i></a>
       <a href="mailto:dotrieftravels@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
       <a href="https://www.instagram.com/dotrieftravels" target="_blank"><i class="fab fa-instagram"></i></a>
-      <a href="https://twitter.com/dotrieftravels" target="_blank"><i class="fab fa-twitter"></i></a>
     </div>
   </footer>
 
+  <!-- Spinner Script -->
   <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
   <script>
     var travelstartIframeId = 'travelstartIframe';
@@ -232,17 +157,6 @@
       $('.spin').css('display', 'none');
     });
   </script>
-  <script>
-  const header = document.getElementById('main-header');
-
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-      header.classList.add('shrink');
-    } else {
-      header.classList.remove('shrink');
-    }
-  });
-</script>
 
 </body>
-</html> 
+</html>
