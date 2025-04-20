@@ -30,7 +30,6 @@ h1, h2, h3 {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background-color: #007bff;
 }
 .hero-wrapper {
    width: 100%;
@@ -343,10 +342,9 @@ section h2 {
   z-index: 1000;
   background-color: #007bff;
 }*/
-
 /* Hamburger Menu */
 .hamburger {
-  display: none;
+/*  display: none;
   flex-direction: column;
   cursor: pointer;
   gap: 5px;
@@ -360,7 +358,7 @@ section h2 {
 }
 
 /* Mobile Navigation */
-@media (max-width: 768px) {
+/*@media (max-width: 768px) {
   nav ul {
     flex-direction: column;
     background-color: #007bff;
@@ -379,10 +377,7 @@ section h2 {
 
   .hamburger {
     display: flex;
-  }
-
-
-  
+  } 
 /*.main-header {
   position: sticky;
   top: 0;
