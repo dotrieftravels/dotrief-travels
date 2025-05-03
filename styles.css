@@ -196,6 +196,10 @@ button[type="submit"]:hover {
 /* Social Media */
 .social-links {
   margin-top: 20px;
+   color: #0077b5;
+  font-size: 1.5rem;
+  gap: 15px;
+  display:flex;
 }
 
 .social-links a {
