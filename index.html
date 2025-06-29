@@ -274,5 +274,19 @@
     });
   </script>
 
+  <script>
+  const observer = new IntersectionObserver(function(entries) {
+    if(entries[0].isIntersecting === true) {
+      gtag('event', 'iframe_viewed', {
+        'event_category': 'Booking',
+        'event_label': 'Travelstart iframe loaded'
+      });
+    }
+  }, { threshold: [0] });
+
+  observer.observe(document.querySelector("#travelstartIframe-d62ab4e3-5eb9-4b8f-a507-32e2960f2172"));
+</script>
+
+
 </body>
 </html>
