@@ -273,7 +273,7 @@
       $('.spin').css('display', 'none');
     });
   </script>
-
+<!--tracking iframe if used-->
   <script>
   const observer = new IntersectionObserver(function(entries) {
     if(entries[0].isIntersecting === true) {
@@ -286,6 +286,7 @@
 
   observer.observe(document.querySelector("#travelstartIframe-d62ab4e3-5eb9-4b8f-a507-32e2960f2172"));
 </script>
+  <!--tracking book now button-->
 <script>
   document.getElementById("bookFlight").addEventListener("click", function() {
     gtag('event', 'iframe_click', {
