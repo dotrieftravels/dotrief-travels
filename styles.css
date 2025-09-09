@@ -351,3 +351,20 @@ section h2 {
     display: flex;
   }
 }
+.social-icons a {
+  font-size: 22px;
+  color: white;
+  background: #0077b5;       /* default color */
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;        /* makes it round */
+  transition: transform 0.3s, background 0.3s;
+}
+
+.social-icons a:hover {
+  background: #ff6600;       /* hover color */
+  transform: scale(1.2);
+}
