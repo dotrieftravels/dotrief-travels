@@ -465,45 +465,23 @@ section h2 {
 .hamburger.active .bar:nth-child(3) {
   transform: rotate(-45deg) translate(5px, -5px);
 }
-/* Accordion Styles */
-.accordion-item {
-  margin-bottom: 10px;
-  border-bottom: 1px solid #ddd;
+#universities {
+  padding: 40px 20px;
+  background: #fdf6f0;
+  text-align: center;
 }
 
-.accordion-header {
-  background-color: #f7f7f7;
-  color: #333;
-  cursor: pointer;
-  padding: 12px 20px;
-  text-align: left;
-  border: none;
-  outline: none;
-  font-size: 1.1rem;
-  transition: background 0.3s, color 0.3s;
-  width: 100%;
-}
-
-.accordion-header:hover {
-  background-color: #e0e0e0;
-}
-
-.accordion-content {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.5s ease, padding 0.5s ease;
-  padding: 0 20px;
-}
-
-.accordion-content ul {
-  list-style: disc;
-  padding-left: 20px;
-  margin: 10px 0;
-}
-
-/* Search box styling */
-#universitySearch {
+#universities select {
+  padding: 10px;
+  font-size: 1rem;
   border: 1px solid #ccc;
   border-radius: 5px;
-  box-sizing: border-box;
+  width: 80%;
+  max-width: 400px;
+}
+
+#universities label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 10px;
 }
