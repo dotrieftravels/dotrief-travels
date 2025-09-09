@@ -465,23 +465,49 @@ section h2 {
 .hamburger.active .bar:nth-child(3) {
   transform: rotate(-45deg) translate(5px, -5px);
 }
+/* Universities Section */
 #universities {
-  padding: 40px 20px;
-  background: #fdf6f0;
+  min-height: 350px; /* gives space so it doesn’t look squeezed */
+  padding: 60px 20px;
+  background: #f0f7f6; /* soft professional green-blue (matches your booking section) */
   text-align: center;
 }
 
-#universities select {
-  padding: 10px;
-  font-size: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  width: 80%;
-  max-width: 400px;
+#universities h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #1c87c9;
 }
 
 #universities label {
   font-weight: bold;
   display: block;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+  color: #333;
 }
+
+#universities select {
+  width: 70%;               /* 70% width */
+  max-width: 600px;         /* not too wide on large screens */
+  padding: 12px 15px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  background-color: #fff;
+  transition: border-color 0.3s ease;
+}
+
+#universities select:focus {
+  border-color: #1c87c9;
+  outline: none;
+}
+
+#selected-university {
+  margin-top: 25px;
+  font-weight: bold;
+  color: #1c87c9;
+  font-size: 1.1rem;
+}
+
