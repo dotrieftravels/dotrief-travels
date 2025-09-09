@@ -84,144 +84,117 @@
       Let’s take you places — safely, smartly, successfully.
     </p>
   </section>
-<section id="universities" class="container">
+<section id="universities">
   <h2>Partner Universities</h2>
-  <p>Click on a region to see the list of universities we work with. You can also search by name below:</p>
 
-  <!-- Search Box -->
-  <input type="text" id="universitySearch" placeholder="Search universities..." style="width:100%;padding:10px;margin-bottom:15px;font-size:1rem;">
+  <label for="university-select">Select a University:</label>
+  <select id="university-select">
+    <option value="">-- Choose a University --</option>
+    <option>Northumbria University London</option>
+    <option>Ulster University London, Birmingham and Manchester</option>
+    <option>South Wales University</option>
+    <option>Solent University</option>
+    <option>Canterbury Christ Church University</option>
+    <option>Aston University (Birmingham campus)</option>
+    <option>Aston University (Through CEG – London)</option>
+    <option>Coventry University</option>
+    <option>Robert Gordon University</option>
+    <option>University of the Creative Arts</option>
+    <option>University of Gloucestershire</option>
+    <option>Ravensbourne University</option>
+    <option>Leeds Trinity University</option>
+    <option>Swansea University</option>
+    <option>Regent’s University London</option>
+    <option>Heriot Watt University</option>
+    <option>Bangor University</option>
+    <option>Birmingham City University</option>
+    <option>De Montfort University</option>
+    <option>Hult International Business School (London)</option>
+    <option>Regent College London</option>
+    <option>University College Birmingham</option>
+    <option>University of Bradford</option>
+    <option>University of Hertfordshire</option>
+    <option>University of Huddersfield (London)</option>
+    <option>UWE Bristol</option>
+    <option>Derby University</option>
+    <option>Edinburgh Napier University</option>
+    <option>Glasgow Caledonian University</option>
+    <option>Keele University</option>
+    <option>University of West London</option>
+    <option>London South Bank University</option>
+    <option>Arden University</option>
+    <option>University Academy 92</option>
+    <option>Cardiff Metropolitan University</option>
+    <option>Lincoln University</option>
+    <option>University of Kent</option>
+    <option>University of Leicester</option>
+    <option>Leeds Conservatoire University</option>
+    <option>Northumbria University Newcastle</option>
+    <option>Royal Holloway University of London</option>
+    <option>University of Roehampton London</option>
+    <option>University of Strathclyde</option>
+    <option>Oxford International Education Group</option>
+    <option>Navitas</option>
+    <option>Study Group</option>
+    <option>INTO</option>
+    <option>University of Wales Trinity Saint David</option>
+    <option>University of Greenwich</option>
+    <option>University of Law</option>
+    <option>University of East London</option>
+    <option>London Metropolitan University</option>
+    <option>University of Chester</option>
+    <option>University of Brighton</option>
+    <option>University of Hull London (CEG)</option>
+    <option>Buckinghamshire New University</option>
+    <option>Health Science University</option>
+    <option>Teesside University</option>
+    <option>University of Salford</option>
+    <option>Newcastle College</option>
+    <option>Newcastle University</option>
+    <option>University of Suffolk</option>
+    <option>University of Solent Southampton</option>
+    <option>University of Cumbria – International College</option>
+    <option>University of Wolverhampton – International College</option>
+    <option>Technological University Dublin – Ireland</option>
+    <option>Global Banking School – Malta and Dubai</option>
+    <option>VIZJA University – Poland</option>
+    <option>International Business Academy – Denmark</option>
+    <option>International Business School – Hungary</option>
+    <option>University of Debrecen – Hungary</option>
+    <option>Wekerle Business School – Hungary</option>
+    <option>University of Europe for Applied Science – Germany and Dubai</option>
+    <option>Asia Pacific University of Technology and Innovation – Malaysia</option>
+    <option>Limkokwing University of Creative Technology – Malaysia</option>
+    <option>Raffles University – Malaysia</option>
+    <option>College de Paris – France</option>
+    <option>Ecole Conte – France</option>
+    <option>Top Tech College – France</option>
+    <option>Ecema College School – France</option>
+    <option>Ascencia Valencia – Spain</option>
+    <option>Modul University – Austria</option>
+    <option>University West – Sweden</option>
+    <option>IBAT – Ireland</option>
+    <option>Hult International Business School – Dubai</option>
+    <option>Heriot Watt University – Dubai</option>
+    <option>Arden University – Germany</option>
+    <option>International University of Applied Science – Germany</option>
+    <option>AIMST University – Malaysia</option>
+    <option>International European University – Malta</option>
+    <option>AURA Labor – Spain</option>
+    <option>IHMGS International School – Spain</option>
+    <option>Hotel Escuela Ecotur – Spain</option>
+    <option>C3S Business School – Spain</option>
+    <option>Britts Imperial – Dubai</option>
+    <option>Griffith College – Ireland</option>
+    <option>Schiller International University – France</option>
+    <option>Wrexham University</option>
+    <option>Hartpury University</option>
+    <option>Leeds Beckett University</option>
+    <option>Aberystwyth University</option>
+  </select>
 
-  <div class="accordion">
-
-    <!-- UK & Europe -->
-    <div class="accordion-item">
-      <button class="accordion-header">UK & Europe</button>
-      <div class="accordion-content">
-        <ul>
-          <li>Northumbria University London</li>
-          <li>Ulster University London, Birmingham and Manchester</li>
-          <li>South Wales University</li>
-          <li>Solent University</li>
-          <li>Canterbury Christ Church University</li>
-          <li>Aston University (Birmingham campus)</li>
-          <li>Aston University (Through CEG – London)</li>
-          <li>Coventry University</li>
-          <li>Robert Gordon University</li>
-          <li>University of the Creative Arts</li>
-          <li>University of Gloucestershire</li>
-          <li>Ravensbourne University</li>
-          <li>Leeds Trinity University</li>
-          <li>Swansea University</li>
-          <li>Regent’s University London</li>
-          <li>Heriot Watt University</li>
-          <li>Bangor University</li>
-          <li>Birmingham City University</li>
-          <li>De Montfort University</li>
-          <li>Hult International Business School (London)</li>
-          <li>Regent College London</li>
-          <li>University College Birmingham</li>
-          <li>University of Bradford</li>
-          <li>University of Hertfordshire</li>
-          <li>University of Huddersfield (London)</li>
-          <li>UWE Bristol</li>
-          <li>Derby University</li>
-          <li>Edinburgh Napier University</li>
-          <li>Glasgow Caledonian University</li>
-          <li>Keele University</li>
-          <li>University of South Wales</li>
-          <li>University of West London</li>
-          <li>London South Bank University</li>
-          <li>Arden University</li>
-          <li>University Academy 92</li>
-          <li>Cardiff Metropolitan University</li>
-          <li>Lincoln University</li>
-          <li>University of Kent</li>
-          <li>University of Leicester</li>
-          <li>Leeds Conservatoire University</li>
-          <li>Northumbria University Newcastle</li>
-          <li>Royal Holloway University of London</li>
-          <li>University of Roehampton London</li>
-          <li>University of Strathclyde</li>
-          <li>Oxford International Education Group</li>
-          <li>Navitas</li>
-          <li>Study Group</li>
-          <li>INTO</li>
-          <li>University of Wales Trinity Saint David</li>
-          <li>University of Greenwich</li>
-          <li>University of Law</li>
-          <li>University of East London</li>
-          <li>London Metropolitan University</li>
-          <li>University of Chester</li>
-          <li>University of Brighton</li>
-          <li>University of Hull London</li>
-          <li>Buckinghamshire New University</li>
-          <li>Health Science University</li>
-          <li>Teesside University</li>
-          <li>University of Salford</li>
-          <li>Newcastle College</li>
-          <li>Newcastle University</li>
-          <li>University of Suffolk</li>
-          <li>University of Solent Southampton</li>
-          <li>University of Cumbria International College</li>
-          <li>University of Wolverhampton International College</li>
-          <li>Wrexham University</li>
-          <li>Hartpury University</li>
-          <li>Leeds Beckett University</li>
-          <li>Aberystwyth University</li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- Asia & Middle East -->
-    <div class="accordion-item">
-      <button class="accordion-header">Asia & Middle East</button>
-      <div class="accordion-content">
-        <ul>
-          <li>Asia Pacific University of Technology and Innovation</li>
-          <li>Limkokwing University of Creative Technology</li>
-          <li>Raffles University</li>
-          <li>AIMST University</li>
-          <li>Hult International Business School – Dubai</li>
-          <li>Heriot Watt University – Dubai</li>
-          <li>Britts Imperial</li>
-          <li>International Business School – Hungary</li>
-          <li>University of Debrecen</li>
-          <li>Wekerle Business School</li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- Other Europe -->
-    <div class="accordion-item">
-      <button class="accordion-header">Other Europe</button>
-      <div class="accordion-content">
-        <ul>
-          <li>VIZJA University</li>
-          <li>International Business Academy – Denmark</li>
-          <li>University of Europe for Applied Science</li>
-          <li>Modul University – Austria</li>
-          <li>University West – Sweden</li>
-          <li>IBAT – Ireland</li>
-          <li>Griffith College – Ireland</li>
-          <li>Arden University – Germany</li>
-          <li>International University of Applied Science – Germany</li>
-          <li>College de Paris</li>
-          <li>Ecole Conte</li>
-          <li>Top Tech College</li>
-          <li>Ecema College School</li>
-          <li>Ascencia Valencia</li>
-          <li>AURA Labor</li>
-          <li>IHMGS International School</li>
-          <li>Hotel Escuela Ecotur</li>
-          <li>C3S Business School</li>
-        </ul>
-      </div>
-    </div>
-
-  </div>
+  <div id="selected-university" style="margin-top:20px; font-weight:bold; color:#1c87c9;"></div>
 </section>
-
-  
 
   <!-- SERVICES SECTION -->
   <section id="services" class="container">
@@ -440,29 +413,18 @@ hamburger.addEventListener('click', () => {
   hamburger.classList.toggle('active');
 });
 </script>
-  <script>
-  // Accordion toggle
-  const accHeaders = document.querySelectorAll('.accordion-header');
-  accHeaders.forEach(header => {
-    header.addEventListener('click', () => {
-      const content = header.nextElementSibling;
-      const isOpen = content.style.maxHeight && content.style.maxHeight !== '0px';
-      document.querySelectorAll('.accordion-content').forEach(c => c.style.maxHeight = null);
-      if (!isOpen) {
-        content.style.maxHeight = content.scrollHeight + "px";
-      }
-    });
-  });
+ <script>
+  const select = document.getElementById('university-select');
+  const output = document.getElementById('selected-university');
 
-  // Search filter
-  const searchInput = document.getElementById('universitySearch');
-  searchInput.addEventListener('input', () => {
-    const filter = searchInput.value.toLowerCase();
-    document.querySelectorAll('.accordion-content ul li').forEach(li => {
-      li.style.display = li.textContent.toLowerCase().includes(filter) ? '' : 'none';
-    });
+  select.addEventListener('change', function() {
+    if (this.value) {
+      output.textContent = "You selected: " + this.value;
+    } else {
+      output.textContent = "";
+    }
   });
 </script>
-
+ 
 </body>
 </html>.  
