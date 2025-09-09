@@ -465,3 +465,45 @@ section h2 {
 .hamburger.active .bar:nth-child(3) {
   transform: rotate(-45deg) translate(5px, -5px);
 }
+/* Accordion Styles */
+.accordion-item {
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.accordion-header {
+  background-color: #f7f7f7;
+  color: #333;
+  cursor: pointer;
+  padding: 12px 20px;
+  text-align: left;
+  border: none;
+  outline: none;
+  font-size: 1.1rem;
+  transition: background 0.3s, color 0.3s;
+  width: 100%;
+}
+
+.accordion-header:hover {
+  background-color: #e0e0e0;
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, padding 0.5s ease;
+  padding: 0 20px;
+}
+
+.accordion-content ul {
+  list-style: disc;
+  padding-left: 20px;
+  margin: 10px 0;
+}
+
+/* Search box styling */
+#universitySearch {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
