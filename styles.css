@@ -305,3 +305,49 @@ section h2 {
   line-height: 1.6;
   color: #555;
 }
+/* --- Navigation Responsive Styles --- */
+
+/* Basic nav reset */
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Hide hamburger on desktop */
+.hamburger {
+  display: none;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #333;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  nav ul {
+    position: absolute;
+    top: 70px; /* adjust to match header height */
+    right: 0;
+    background: white;
+    width: 200px;
+    flex-direction: column;
+    display: none;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  .hamburger {
+    display: block; /* show hamburger on mobile */
+  }
+
+  /* Show menu when active */
+  nav.active ul {
+    display: flex;
+  }
+}
