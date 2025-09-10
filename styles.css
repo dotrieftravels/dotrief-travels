@@ -512,9 +512,14 @@ section h2 {
 }
 /* Contact Section Styling */
 #contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  /* vertical center */
+  align-items: center;      /* horizontal center */
   text-align: center;
-  padding: 60px 20px;
+  padding: 80px 20px;
   background-color: #fdf6f0; /* soft peach tone to match your theme */
+  min-height: 60vh; /* ensures section is tall enough */
 }
 
 #contact h2 {
@@ -533,6 +538,7 @@ section h2 {
 .whatsapp-btn {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 10px;
   background-color: #25D366;
   color: #fff;
@@ -551,5 +557,6 @@ section h2 {
 .whatsapp-btn i {
   font-size: 1.3rem;
 }
+
 
 
