@@ -259,19 +259,19 @@ footer {
   padding: 60px 20px;
 }
 
-#contact {
+/*#contact {
   background-color: #f5f5f5; /* Light gray */
   padding: 60px 20px;
 }
-
-/* === Section Heading Styling === */
+*/
+/* === Section Heading Styling === 
 section h2 {
   font-size: 2rem;
   margin-bottom: 20px;
   text-align: center;
   color: #333;
 }
-
+*/
 /* === Service Grid (from Services Section) === */
 .services-grid {
   display: grid;
@@ -510,4 +510,46 @@ section h2 {
   color: #1c87c9;
   font-size: 1.1rem;
 }
+/* Contact Section Styling */
+#contact {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #fdf6f0; /* soft peach tone to match your theme */
+}
+
+#contact h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #1c87c9;
+}
+
+#contact p {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+  color: #444;
+}
+
+/* WhatsApp Button */
+.whatsapp-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #25D366;
+  color: #fff;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.whatsapp-btn:hover {
+  background-color: #1ebe57;
+}
+
+.whatsapp-btn i {
+  font-size: 1.3rem;
+}
+
 
