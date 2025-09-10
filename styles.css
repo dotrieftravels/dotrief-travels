@@ -566,11 +566,12 @@ footer {
 }
 
 .footer-section {
-  text-align: center;
+  text-align: left;
   margin-bottom: 25px;
 }
 
 .footer-section h3 {
+  text-align: left;
   margin-bottom: 15px;
   font-size: 1.3rem;
   color: #ffeb3b; /* accent color for headings */
@@ -578,12 +579,14 @@ footer {
 
 .footer-links {
   list-style: none;
+  text-align: left;
   padding: 0;
   margin: 0;
 }
 
 .footer-links li {
   margin: 8px 0;
+  text-align: left;
 }
 
 .footer-links a {
