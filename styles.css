@@ -216,12 +216,12 @@ button[type="submit"]:hover {
 }
 
 /* Footer */
-footer {
+/*footer {
   text-align: center;
   background-color: #f4f4f4;
   padding: 20px 0;
   margin-top: 40px;
-}
+}*/
 /*footer .social-links {
     color: #0077b5;
     font-size: 1.5rem;
