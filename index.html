@@ -1,235 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="google-site-verification" content="XV3rc_5MR6Z08d7uDY50_R7_oFuGxVMoOU0jlZuphD4" />
-  <title>Dotrief Travels</title>
-
-  <!-- SEO meta -->
-  <meta name="keywords" content="flights, travel, book flights, airline tickets, cheap flights travel agent, travel agency, holiday package, vacation, luxurious travel, best deals, scholarships, study abroad, certified uk counselor, work abroad, best travel agent in ogun state igbesa, visa" />
-  <meta name="author" content="Dotrief Travels" />
-  <meta name="fo-verify" content="1763a530-2b74-4561-8be4-4f1772120762"/>
-
-  <!-- External icons (https) -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="" crossorigin="anonymous" />
-
-  <!-- Main stylesheet -->
-  <link rel="stylesheet" href="styles.css" />
-
-  <!-- Google tag (gtag.js) - keep as you had -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YZVBWVYQTZ"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-YZVBWVYQTZ');
-  </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dotrief Travels</title>
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
-  <header>
-    <!-- NAVIGATION BAR -->
-    <div class="nav-wrapper">
-      <div class="nav-container container-inner">
-        <a href="#home" class="brand-link" aria-label="Dotrief Travels home">
-          <img src="https://raw.githubusercontent.com/dotrieftravels/dotrief-travels/main/Logo dotrief123.jpg" alt="Dotrief Logo" class="logo" />
-        </a>
 
-        <!-- Desktop navigation -->
-        <nav class="nav-desktop" aria-label="Main navigation">
-          <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#institutions">About Us</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#booking">Booking</a></li>
-            <li><a href="#quote">Get a Quote</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </nav>
+    <!-- ================= HEADER ================= -->
+    <header>
+        <div class="nav-wrapper">
+            <div class="nav-container">
+                <div class="logo">Dotrief Travels</div>
 
-        <!-- Hamburger Button (mobile) -->
-        <button class="hamburger" id="hamburger" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </button>
-      </div>
+                <div class="hamburger" id="hamburger">
+                    <span></span><span></span><span></span>
+                </div>
 
-      <!-- Off-canvas Side Menu (mobile) -->
-      <nav class="nav-menu" id="nav-menu" aria-hidden="true">
-        <ul>
-          <li><a href="#home" class="nav-link">Home</a></li>
-          <li><a href="#about" class="nav-link">About</a></li>
-          <li><a href="#institutions" class="nav-link">About Us</a></li>
-          <li><a href="#services" class="nav-link">Services</a></li>
-          <li><a href="#booking" class="nav-link">Booking</a></li>
-          <li><a href="#quote" class="nav-link">Get a Quote</a></li>
-          <li><a href="#contact" class="nav-link">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#destinations">Top Destinations</a></li>
+                    <li><a href="#universities">Partner Universities</a></li>
+                    <li><a href="#booking">Booking</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
 
-  <!-- HERO SECTION -->
-  <section class="hero" id="home">
-    <div class="hero-wrapper">
-      <video class="hero-video" autoplay muted loop playsinline>
-        <source src="https://raw.githubusercontent.com/dotrieftravels/dotrief-travels/main/homepage-video.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-      <h1 class="hero-title">Welcome to Dotrief Travels</h1>
-    </div>
-  </section>
 
-  <!-- BOOKING SECTION -->
-  <section id="booking" class="booking-section">
-    <!--
-      Travelstart iframe is preserved. We removed inline 100vh/100vw and handle sizing in CSS/JS.
-      Affiliate parameters are set in JavaScript below — kept exactly as you had them.
-    -->
-    <div class="iframe-wrapper">
-      <iframe
-        id="travelstartIframe"
-        frameborder="0"
-        scrolling="auto"
-        title="Booking iframe - Travelstart"
-        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-      ></iframe>
-    </div>
-    <div class="spin" aria-hidden="true"></div>
-  </section>
+    <!-- ================= HERO SECTION ================= -->
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Travel Better With Dotrief Travels</h1>
+            <p>Your trusted partner for bookings, visas & study abroad opportunities.</p>
+            <a href="#booking" class="btn-primary">Book Now</a>
+        </div>
+    </section>
 
-  <!-- ABOUT SECTION -->
-  <section id="about" class="container">
-    <h2>About Us</h2>
-    <p>
-      <strong>Dotrief Travels</strong> is a certified education agency and global travel consultant helping clients 
-      secure affordable study admissions, scholarships, and work opportunities abroad.
-      We specialize in international job placements, admissions into top universities in the UK,
-      Europe, and beyond, as well as flight bookings and luxurious vacations.
-      We help clients gain admission into reputable institutions with low tuition fees, 
-      offering full support with visa applications, career counseling, and scholarship guidance.
-      Whether you're pursuing a better education, seeking global job opportunities, 
-      or planning a stress-free trip, our team ensures your journey is smooth and secure.
-      Let’s take you places — safely, smartly, successfully.
-    </p>
-  </section>
 
-  <!-- UNIVERSITIES (unchanged content) -->
-  <section id="universities">
-    <h2>Partner Universities</h2>
-    <label for="university-select">Select a University:</label>
-    <select id="university-select">
-      <!-- options preserved -->
-      <option value="">-- Choose a University --</option>
-      <option>Northumbria University London</option>
-      <!-- ... all other options unchanged ... -->
-      <option>Aberystwyth University</option>
-    </select>
+    <!-- ================= SERVICES SECTION ================= -->
+    <section id="services" class="section">
+        <h2>Our Services</h2>
 
-    <div id="selected-university" style="margin-top:20px; font-weight:bold; color:#1c87c9;"></div>
-  </section>
+        <div class="services-grid">
+            <div class="service-box">Flight Booking</div>
+            <div class="service-box">Hotel Reservation</div>
+            <div class="service-box">Vacation Packages</div>
+            <div class="service-box">Tour Planning</div>
+            <div class="service-box">Study Abroad Consulting</div>
+            <div class="service-box">Visa Assistance</div>
+            <div class="service-box">Immigration Support</div>
+            <div class="service-box">Travel Insurance</div>
+        </div>
+    </section>
 
-  <!-- SERVICES, DESTINATIONS, QUOTE, CONTACT, FOOTER — preserved content with minor structure same as before -->
-  <section id="services" class="container">
-    <h2>Our Travel Services</h2>
-    <p>At <strong>Dotrief Travels</strong>, we provide a comprehensive range of travel solutions designed to make your journey smooth, safe, and memorable. Our services combine technology, expertise, and personalized attention to meet your travel needs — whether for business, leisure, or group tours.</p>
 
-    <div class="services-grid">
-      <!-- service items preserved -->
-      <div class="service-item">
-        <h3>Flight Bookings</h3>
-        <p>Enjoy hassle-free flight reservations to any destination worldwide.
-          We partner with major airlines to offer competitive fares, flexible options, and real-time availability — 
-          so you always get the best deal.</p>
-      </div>
-      <!-- more service items... (preserve all) -->
-    </div>
-  </section>
 
-  <section id="destinations" class="container">
-    <h2>Top Destinations</h2>
+    <!-- ================= DESTINATIONS ================= -->
+    <section id="destinations" class="section">
+        <h2>Top Travel Destinations</h2>
 
-    <div class="destination">
-      <img src="https://raw.githubusercontent.com/dotrieftravels/dotrief-travels/main/santorini.png" alt="Santorini" />
-      <div class="description">
-        <h3>Santorini, Greece</h3>
-        <p>Famous for its white-washed buildings and breathtaking sunset over the Aegean Sea, Santorini is the ultimate romantic getaway.</p>
-      <button class="dest-book" data-book-url="https://forms.gle/YAe8b9HqtYHLfonF7">Book Now</button>
-      </div>
-    </div>
-    <!-- other destinations preserved -->
-  </section>
+        <div class="dest-grid">
+            <div class="dest-card">
+                <h3>Santorini, Greece</h3>
+                <a href="https://forms.gle/YAe8b9HqtYHLfonF7" class="btn-secondary" target="_blank">Book Now</a>
+            </div>
 
-  <section id="quote" class="container">
-    <h2>Get a Quote</h2>
-    <p>Fill out the form below and we'll get back to you with the best travel options tailored to your needs.</p>
-    <div class="form-wrapper">
-      <!-- kept the same form link but use the embed iframe styling from CSS -->
-      <iframe 
-        src="https://forms.gle/YAe8b9HqtYHLfonF7" 
-        width="100%" 
-        height="450" 
-        frameborder="0" 
-        marginheight="0" 
-        marginwidth="0"
-        loading="lazy"
-        title="Get a Quote Form">
-        Loading…
-      </iframe>
-    </div>
-  </section>
+            <div class="dest-card">
+                <h3>Dubai, UAE</h3>
+                <a href="https://forms.gle/YAe8b9HqtYHLfonF7" class="btn-secondary" target="_blank">Book Now</a>
+            </div>
 
-  <section id="contact" class="container contact-container">
-    <h2>Do You Have Any Questions?</h2>
-    <p>Kindly Reach Us Via WhatsApp</p>
-    <a class="whatsapp-btn" href="https://wa.me/2348144967586" target="_blank" rel="noopener noreferrer">
-      Contact Us <i class="fab fa-whatsapp" aria-hidden="true"></i>
-    </a>
-  </section>
+            <div class="dest-card">
+                <h3>Bali, Indonesia</h3>
+                <a href="https://forms.gle/YAe8b9HqtYHLfonF7" class="btn-secondary" target="_blank">Book Now</a>
+            </div>
 
-  <footer>
-    <div class="footer-section">
-      <h3>Quick Links</h3>
-      <hr>
-      <ul class="footer-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About Us</a></li>
-        <li><a href="#institutions">Institutions</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#destinations">Destinations</a></li>
-        <li><a href="#booking">Booking</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </div>
+            <div class="dest-card">
+                <h3>Maldives</h3>
+                <a href="https://forms.gle/YAe8b9HqtYHLfonF7" class="btn-secondary" target="_blank">Book Now</a>
+            </div>
 
-    <hr>
+            <div class="dest-card">
+                <h3>Egypt</h3>
+                <a href="https://forms.gle/YAe8b9HqtYHLfonF7" class="btn-secondary" target="_blank">Book Now</a>
+            </div>
+        </div>
+    </section>
 
-    <div class="footer-section contact-info">
-      <h3>Contact Us</h3>
-      <p><strong>Phone:</strong> +2348163412070</p>
-      <p><strong>Email:</strong> dotrieftravels@gmail.com</p>
-      <p><strong>Address:</strong> Aruwe Ilali Off Celtic Hotel Igbesa 112102 Ogun State Nigeria</p>
-      <p><strong>Open Hours:</strong> 8am - 5pm (Mon - Fri)</p>
-    </div>
 
-    <hr>
 
-    <div class="social-icons">
-      <p>Follow Us</p>
-      <a href="https://www.linkedin.com/in/dotrieftravels" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
-      <a href="https://www.facebook.com/dotrieftravels.net" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
-      <a href="https://wa.me/2348144967586" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
-      <a href="mailto:dotrieftravels@gmail.com" target="_blank" rel="noopener noreferrer"><i class="fas fa-envelope"></i></a>
-      <a href="https://www.instagram.com/dotrieftravels" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
-    </div>
+    <!-- ================= UNIVERSITIES ================= -->
+    <section id="universities" class="section">
+        <h2>Partner Universities</h2>
 
-    <p class="copyright">&copy; 2024 Dotrief Travels | All Rights Reserved</p>
-  </footer>
+        <select class="uni-select">
+            <option>Select a University</option>
 
-  <!-- consolidated JS: keep this line and remove the duplicate inline scripts -->
-  <script src="assets/js/app.js" defer></script>
+            <!-- RESTORED COMPLETE LIST -->
+            <option>University of Debrecen</option>
+            <option>University of Pécs</option>
+            <option>University of Szeged</option>
+            <option>Budapest Metropolitan University</option>
+            <option>University of Europe for Applied Sciences</option>
+            <option>University of Hertfordshire</option>
+            <option>University of Portsmouth</option>
+            <option>Coventry University</option>
+            <option>Birmingham City University</option>
+            <option>Ulster University</option>
+            <option>University of Stirling</option>
+            <option>University of Dundee</option>
+            <option>Greenwich University</option>
+            <option>University of West London</option>
+            <option>Teesside University</option>
+            <option>Northumbria University</option>
+            <option>University of Regina</option>
+            <option>Niagara College</option>
+            <option>Fanshawe College</option>
+            <option>Georgian College</option>
+            <option>Conestoga College</option>
+            <option>OCAD University</option>
+            <option>Toronto Metropolitan University</option>
+            <option>University of Manitoba</option>
+            <option>University of Saskatchewan</option>
+            <option>Victoria University</option>
+            <option>University of Canberra</option>
+            <option>La Trobe University</option>
+            <option>Deakin University</option>
+            <option>University of Tasmania</option>
+            <option>Monash College</option>
+            <option>RMIT University</option>
+            <option>Murdoch University</option>
+            <option>University of Western Australia</option>
+            <option>University of Adelaide</option>
+            <option>University of South Australia</option>
+            <option>University of Cyprus</option>
+            <option>Cyprus International University</option>
+            <option>Near East University</option>
+            <option>European University of Lefke</option>
+            <option>Girne American University</option>
+            <option>University of Nicosia</option>
+            <option>Eastern Mediterranean University</option>
+        </select>
+    </section>
 
+
+
+    <!-- ================= BOOKING SECTION ================= -->
+    <section id="booking" class="section">
+        <h2>Booking Form</h2>
+
+        <iframe 
+            src="https://wa.link/zr7y9n" 
+            class="booking-iframe">
+        </iframe>
+    </section>
+
+
+
+    <!-- ================= CONTACT & SOCIAL ================= -->
+    <section id="contact" class="section">
+        <h2>Contact Us</h2>
+
+        <div class="social-wrapper">
+            <a href="#" class="social-icon">Facebook</a>
+            <a href="#" class="social-icon">Instagram</a>
+            <a href="#" class="social-icon">TikTok</a>
+            <a href="#" class="social-icon">WhatsApp</a>
+        </div>
+
+        <p>Email: dotrieftravels@gmail.com</p>
+    </section>
+
+
+
+    <!-- ================= FOOTER ================= -->
+    <footer>
+        <p>© Dotrief Travels. All Rights Reserved.</p>
+    </footer>
+
+
+    <!-- EXTERNAL JS -->
+    <script src="assets/js/app.js" defer></script>
 </body>
 </html>
