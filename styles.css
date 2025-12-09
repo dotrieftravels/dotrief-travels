@@ -1,304 +1,177 @@
-/* styles.css - cleaned and restructured */
-
-/* Base Reset */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-html, body {
-  height: 100%;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #333;
-  background: #fff;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #ffffff;
+    color: #222;
 }
 
-/* Utility container */
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 40px 0;
+/* HEADER */
+.nav-wrapper {
+    background: #fff;
+    padding: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
-/* Header & nav */
-header {
-  position: sticky;
-  top: 0;
-  z-index: 2000;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-  background: linear-gradient(90deg, #007bff, #1c87c9); /* subtle brand header */
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.container-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px 16px;
-}
-
-/* Logo */
-.logo {
-  height: 50px;
-  width: auto;
-  display: block;
-}
-
-/* Desktop nav - visible on wide screens */
-.nav-desktop ul {
-  display: flex;
-  gap: 20px;
-  list-style: none;
-}
-
-.nav-desktop a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 700;
-  padding: 6px 8px;
-}
-.nav-desktop a:hover { color: #ffeb3b; }
-
-/* Hamburger (mobile) */
 .hamburger {
-  display: none; /* shown on small screens via media query */
-  flex-direction: column;
-  justify-content: space-between;
-  width: 28px;
-  height: 22px;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-}
-.hamburger .bar {
-  height: 3px;
-  width: 100%;
-  background-color: #fff;
-  border-radius: 2px;
-  transition: transform 0.25s ease, opacity 0.25s ease;
+    width: 30px;
+    cursor: pointer;
+    display: none;
 }
 
-/* Off-canvas mobile menu */
-.nav-menu {
-  position: fixed;
-  top: 0;
-  right: -320px; /* hidden by default off screen */
-  width: 320px;
-  height: 100%;
-  background-color: #f7f7f7;
-  box-shadow: -6px 0 18px rgba(0,0,0,0.12);
-  padding: 70px 20px; /* leave room for header area */
-  transition: right 0.28s ease;
-  z-index: 1999;
-}
-.nav-menu ul {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-}
-.nav-menu a {
-  text-decoration: none;
-  color: #333;
-  font-weight: 600;
-  font-size: 1.05rem;
-}
-.nav-menu.show {
-  right: 0;
+.hamburger span {
+    display: block;
+    height: 3px;
+    background: #333;
+    margin: 5px 0;
 }
 
-/* hamburger -> X */
-.hamburger.active .bar:nth-child(1) {
-  transform: translateY(9px) rotate(45deg);
+/* NAV LINKS */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
 }
-.hamburger.active .bar:nth-child(2) {
-  opacity: 0;
-}
-.hamburger.active .bar:nth-child(3) {
-  transform: translateY(-9px) rotate(-45deg);
+
+.nav-links li a {
+    text-decoration: none;
+    color: #222;
 }
 
 /* HERO */
 .hero {
-  position: relative;
-  overflow: hidden;
-}
-.hero-video {
-  width: 100%;
-  height: 420px;
-  object-fit: cover;
-  display: block;
-}
-.hero-title {
-  position: absolute;
-  left: 50%;
-  top: 45%;
-  transform: translate(-50%, -50%);
-  color: #fff;
-  background: rgba(0,0,0,0.45);
-  padding: 18px 22px;
-  border-radius: 10px;
-  font-size: 2.1rem;
-  font-weight: 700;
-  text-align:center;
-  max-width: 90%;
+    padding: 80px 20px;
+    text-align: center;
+    background: #eef9ff;
 }
 
-/* Booking iframe wrapper - controlled sizing in CSS (not 100vh) */
-.booking-section {
-  background-color: #f0f7f6;
-  padding: 40px 0;
-}
-.iframe-wrapper {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-  background: #fafafa;
+.btn-primary {
+    padding: 10px 20px;
+    background: #0077cc;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
 }
 
-/* default iframe height for desktop */
-#iframe-placeholder, #travelstartIframe {
-  display: block;
+/* SECTION */
+.section {
+    padding: 50px 20px;
+    text-align: center;
 }
 
-/* we will set iframe height via JS (messages) but give sensible defaults */
-#travelstartIframe {
-  width: 100%;
-  height: 700px; /* desktop default; JS will update when travelstart sends setHeight */
-  border: 0;
+.about-content {
+    max-width: 800px;
+    margin: auto;
+    line-height: 1.7;
+    font-size: 16px;
+    color: #444;
 }
 
-/* Spinner (loading) */
-.spin::before {
-  animation: 1.5s linear infinite spinner;
-  border: solid 5px #cfd0d1;
-  border-bottom-color: #1c87c9;
-  border-radius: 50%;
-  content: '';
-  height: 40px;
-  width: 40px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate3d(-50%, -50%, 0);
-}
-@keyframes spinner {
-  0% { transform: translate3d(-50%, -50%, 0) rotate(0deg); }
-  100% { transform: translate3d(-50%, -50%, 0) rotate(360deg); }
-}
-
-/* Sections styling */
-section.container, #about, #services, #destinations, #universities {
-  padding: 60px 0;
-}
-
-h2 { color: #1c87c9; margin-bottom: 16px; }
-
-/* Destination cards */
-.destination {
-  display: flex;
-  gap: 20px;
-  align-items: center;
-  flex-wrap: wrap;
-  margin-bottom: 30px;
-}
-.destination img {
-  width: 300px;
-  border-radius: 10px;
-}
-.description {
-  max-width: 600px;
-}
-
-/* Services grid */
+/* SERVICES GRID */
 .services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-}
-.service-item {
-  background: #fff;
-  padding: 25px;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    max-width: 700px;
+    margin: auto;
 }
 
-/* Universities select */
-#universities select {
-  width: 70%;
-  max-width: 600px;
-  padding: 12px 15px;
-  font-size: 1rem;
-  border-radius: 8px;
+.service-box {
+    padding: 15px;
+    background: #f2f2f2;
+    border-radius: 6px;
 }
 
-/* Contact / WhatsApp */
-.contact-container { text-align:center; padding:80px 0; background:#fdf6f0; }
-.whatsapp-btn {
-  display:inline-flex;
-  align-items:center;
-  gap:8px;
-  background:#25D366;
-  color:#fff;
-  text-decoration:none;
-  padding:12px 18px;
-  border-radius:8px;
-  font-weight:700;
+/* DESTINATIONS GRID */
+.dest-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
 }
 
-/* Footer */
+.dest-card {
+    background: #fafafa;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* BUTTON */
+.btn-secondary {
+    display: inline-block;
+    padding: 8px 15px;
+    background: #008751;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+/* UNIVERSITIES */
+.uni-select {
+    padding: 10px;
+    width: 80%;
+    max-width: 600px;
+}
+
+/* BOOKING IFRAME FIX */
+.booking-iframe {
+    width: 100%;
+    height: 650px; /* Increased to prevent desktop scrolling */
+    border: none;
+}
+
+/* SOCIAL ICONS FIX */
+.social-wrapper {
+    display: flex;
+    justify-content: center;  /* CENTERED ON DESKTOP */
+    gap: 25px;
+    margin: 20px 0;
+}
+
+.social-icon {
+    background: #222;
+    color: #fff;
+    padding: 10px 16px;
+    border-radius: 4px;
+}
+
+/* FOOTER */
 footer {
-  background: #071028; /* deep blue for professional look */
-  color: #fff;
-  padding: 40px 20px;
-}
-.footer-section { text-align:center; margin-bottom:24px; }
-.footer-links { list-style:none; margin-top:8px; }
-.footer-links a { color:#fff; text-decoration:none; opacity:0.95; }
-.footer-links a:hover { color:#1c87c9; }
-
-/* Social icons - larger & spaced */
-.social-icons {
-  display:flex;
-  gap:16px;
-  align-items:center;
-  justify-content:center;
-  margin: 12px 0 24px;
-}
-.social-icons a {
-  display:inline-flex;
-  width:48px;
-  height:48px;
-  border-radius:8px;
-  align-items:center;
-  justify-content:center;
-  background: rgba(255,255,255,0.06);
-  color:#fff;
-  font-size:20px;
-  text-decoration:none;
-}
-.social-icons a:hover { background: rgba(255,255,255,0.12); transform: translateY(-3px); transition: .18s ease; }
-
-/* Responsive behavior */
-@media (max-width: 991px) {
-  .nav-desktop { display: none; } /* hide desktop nav on mobile */
-  .hamburger { display: flex; }
-
-  .hero-video { height: 320px; }
-  .hero-title { font-size: 1.6rem; padding: 14px 16px; top:48%; }
-
-  /* smaller iframe height on mobile as default (JS may adjust) */
-  #travelstartIframe { height: 620px; }
+    background: #222;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
 }
 
-@media (max-width: 480px) {
-  .hero-video { height: 260px; }
-  .hero-title { font-size: 1.25rem; padding: 12px; top:50%; left:50%; }
-  .social-icons a { width:44px; height:44px; font-size:18px; }
-  #travelstartIframe { height: 520px; }
+
+
+/* ============== MOBILE FIXES ============== */
+@media (max-width: 768px) {
+
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #fff;
+        padding: 20px;
+    }
+
+    .services-grid,
+    .dest-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .booking-iframe {
+        height: 1000px;
+    }
 }
