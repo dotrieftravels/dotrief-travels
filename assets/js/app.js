@@ -191,7 +191,7 @@ Passengers: ${form.passengers.value}
 Class: ${form.class.value}
 Notes: ${form.notes.value}`;
 
-      let whatsappURL = `https://wa.me/2348144967586?text=${encodeURIComponent(message)}`;
+      let whatsappURL = `https://wa.me/+2348144967586?text=${encodeURIComponent(message)}`;
 
       window.open(whatsappURL, "_blank");
     });
