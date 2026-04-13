@@ -85,11 +85,10 @@
       </video>
       <h1 class="hero-title">Welcome to Dotrief Travels</h1>
     </div>
-  </section>
 
   <!-- BOOKING SECTION -->
-  <section id="booking" class="booking-section">
-    <!-- preserved Travelstart iframe (affiliate) -->
+<!--  <section id="booking" class="booking-section">
+    <!-- preserved Travelstart iframe (affiliate) --
     <div class="iframe-wrapper">
       <iframe
         id="travelstartIframe"
@@ -99,8 +98,52 @@
         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
       ></iframe>
     </div>
-    <div class="spin" aria-hidden="true"></div>
-  </section>
+    <div class="spin" aria-hidden="true"></div> -->
+
+  <section class="flight-request">
+  <h2>Book a Flight with Dotrief Travels ✈️</h2>
+  <p>Fill in your details and we will handle your booking for you.</p>
+
+  <form id="flightForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+    
+    <input type="hidden" name="_replyto" value="info@dotrieftravel.com">
+
+    <input type="text" name="name" placeholder="Full Name" required>
+    
+    <input type="email" name="email" placeholder="Email Address" required>
+    
+    <input type="tel" name="phone" placeholder="Phone Number" required>
+    
+    <input type="text" name="departure" placeholder="Departure City" required>
+    
+    <input type="text" name="destination" placeholder="Destination City" required>
+    
+    <label>Departure Date</label>
+    <input type="date" name="departure_date" required>
+    
+    <label>Return Date (Optional)</label>
+    <input type="date" name="return_date">
+    
+    <select name="passengers" required>
+      <option value="">Number of Passengers</option>
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4+</option>
+    </select>
+    
+    <select name="class" required>
+      <option value="">Travel Class</option>
+      <option>Economy</option>
+      <option>Business</option>
+      <option>First Class</option>
+    </select>
+
+    <textarea name="notes" placeholder="Additional requests (optional)"></textarea>
+
+    <button type="submit">Request Booking</button>
+  </form>
+</section>
 
   <!-- ABOUT SECTION -->
   <section id="about" class="container">
