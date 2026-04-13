@@ -40,7 +40,7 @@
     /* -------------------------
        TRAVELSTART IFRAME SETUP
        ------------------------- */
-    const iframeId = 'travelstartIframe';
+  /*  const iframeId = 'travelstartIframe';
     const iframe = document.getElementById(iframeId);
 
     if (iframe) {
@@ -78,12 +78,12 @@
       if (window.jQuery) {
         window.jQuery(iframe).on('load', hideSpinner);
       }
-    }
+    }*/
 
     /* -------------------------
        IFRAME: listen for postMessage height (Travelstart)
        ------------------------- */
-    window.addEventListener('message', function (e) {
+   /* window.addEventListener('message', function (e) {
       try {
         // Travelstart sends structured messages like [ 'setHeight', heightValue ]
         const data = e.data;
@@ -101,12 +101,12 @@
         // don't break page on unexpected postMessage
         console.warn('iframe message handler error', err);
       }
-    }, false);
+    }, false);*/
 
     /* -------------------------
        GTag: record iframe viewed (IntersectionObserver)
        ------------------------- */
-    if (window.gtag && iframe) {
+  /*  if (window.gtag && iframe) {
       const observer = new IntersectionObserver(function (entries) {
         if (entries[0].isIntersecting === true) {
           try {
@@ -123,7 +123,7 @@
       }, { threshold: [0] });
 
       observer.observe(iframe);
-    }
+    }*/
 
     /* -------------------------
        Book Now / Destination Buttons
@@ -131,7 +131,7 @@
        - We also keep the #bookFlight button tracking
        ------------------------- */
     // existing Book Now primary button
-    const bookBtn = document.getElementById('bookFlight');
+  /*  const bookBtn = document.getElementById('bookFlight');
     if (bookBtn) {
       bookBtn.addEventListener('click', function (e) {
         // small GA event
@@ -142,23 +142,23 @@
               'event_label': 'User clicked Book Now button'
             });
           } catch (err) { /* ignore */ }
-        }
+        }*/
         // optionally scroll to booking iframe so desktop users see it instantly
-        if (iframe) {
+       /* if (iframe) {
           iframe.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
       });
-    }
+    }*/
 
     // generic destination buttons (use data attribute in HTML)
-    document.querySelectorAll('[data-book-url]').forEach(btn => {
+  /*  document.querySelectorAll('[data-book-url]').forEach(btn => {
       btn.addEventListener('click', function (ev) {
         const url = btn.getAttribute('data-book-url');
         if (!url) return;
         // open in new tab (safer for users)
         window.open(url, '_blank');
       });
-    });
+    });*/
 
     /* -------------------------
        Small helpers / cleanup
@@ -168,3 +168,30 @@
 
   }); // DOMContentLoaded
 })();
+/*<script>
+document.getElementById("flightForm").addEventListener("submit", function(e) {
+  e.preventDefault();*/
+
+  let form = e.target;
+
+  let message = `✈️ New Flight Request (Dotrief Travels)
+  
+Name: ${form.name.value}
+Email: ${form.email.value}
+Phone: ${form.phone.value}
+From: ${form.departure.value}
+To: ${form.destination.value}
+Departure: ${form.departure_date.value}
+Return: ${form.return_date.value}
+Passengers: ${form.passengers.value}
+Class: ${form.class.value}
+Notes: ${form.notes.value}`;
+
+  let whatsappURL = `https://wa.me/2348144967586?text=${encodeURIComponent(message)}`;
+
+  // Open WhatsApp
+  window.open(whatsappURL, "_blank");
+
+  // Send email via Formspree
+  form.submit();
+});
