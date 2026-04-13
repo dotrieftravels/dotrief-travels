@@ -172,7 +172,7 @@
 document.getElementById("flightForm").addEventListener("submit", function(e) {
   e.preventDefault();*/
 
-  let form = e.target;
+ let form = e.target;
 
   let message = `✈️ New Flight Request (Dotrief Travels)
   
@@ -187,11 +187,12 @@ Passengers: ${form.passengers.value}
 Class: ${form.class.value}
 Notes: ${form.notes.value}`;
 
-  let whatsappURL = `https://wa.me/2348144967586?text=${encodeURIComponent(message)}`;
+  let whatsappURL = `https://wa.me/+2348144967586?text=${encodeURIComponent(message)}`;
 
-  // Open WhatsApp
-  window.open(whatsappURL, "_blank");
+  // Open WhatsApp AFTER small delay
+  setTimeout(() => {
+    window.open(whatsappURL, "_blank");
+  }, 500);
 
-  // Send email via Formspree
-  form.submit();
 });
+ 
