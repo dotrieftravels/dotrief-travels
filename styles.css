@@ -101,3 +101,47 @@ footer { background:#071028; color:#fff; padding:40px 20px; }
   .social-icons a { width:44px; height:44px; font-size:18px; }
   #travelstartIframe { height:520px; }
 }
+
+.flight-request {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 25px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.flight-request h2 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.flight-request p {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.flight-request input,
+.flight-request select,
+.flight-request textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.flight-request button {
+  width: 100%;
+  padding: 12px;
+  background: #0a66c2;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.flight-request button:hover {
+  background: #084a91;
+}
