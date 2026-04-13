@@ -172,10 +172,14 @@
 document.getElementById("flightForm").addEventListener("submit", function(e) {
   e.preventDefault();*/
 
- let form = e.target;
+ document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("flightForm");
 
-  let message = `✈️ New Flight Request (Dotrief Travels)
-  
+  if (form) {
+    form.addEventListener("submit", function () {
+
+      let message = `✈️ New Flight Request (Dotrief Travels)
+      
 Name: ${form.name.value}
 Email: ${form.email.value}
 Phone: ${form.phone.value}
@@ -187,12 +191,10 @@ Passengers: ${form.passengers.value}
 Class: ${form.class.value}
 Notes: ${form.notes.value}`;
 
-  let whatsappURL = `https://wa.me/+2348144967586?text=${encodeURIComponent(message)}`;
+      let whatsappURL = `https://wa.me/2348144967586?text=${encodeURIComponent(message)}`;
 
-  // Open WhatsApp AFTER small delay
-  setTimeout(() => {
-    window.open(whatsappURL, "_blank");
-  }, 500);
-
+      window.open(whatsappURL, "_blank");
+    });
+  }
 });
  
