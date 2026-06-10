@@ -1,88 +1,29 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-  /* =========================
-     BURGER MENU FIX
-  ========================= */
-const hamburger = document.getElementById("hamburger");
-const navMenu = document.getElementById("nav-menu");
+  const hamburger = document.getElementById("hamburger");
+  const navMenu = document.getElementById("nav-menu");
 
-if (hamburger && navMenu) {
+  if (hamburger && navMenu) {
 
-  hamburger.addEventListener("click", function (e) {
-    e.stopPropagation();
-    navMenu.classList.toggle("show");
-    hamburger.classList.toggle("active");
-  });
-
-  // close when clicking a link
-  document.querySelectorAll("#nav-menu a").forEach(link => {
-    link.addEventListener("click", function () {
-      navMenu.classList.remove("show");
-      hamburger.classList.remove("active");
+    hamburger.addEventListener("click", function () {
+      navMenu.classList.toggle("show");
+      hamburger.classList.toggle("active");
     });
-  });
 
-  // close when clicking outside menu
-  document.addEventListener("click", function (e) {
-    if (!navMenu.contains(e.target) && !hamburger.contains(e.target)) {
-      navMenu.classList.remove("show");
-      hamburger.classList.remove("active");
-    }
-  });
+    document.querySelectorAll("#nav-menu a").forEach(link => {
+      link.addEventListener("click", function () {
+        navMenu.classList.remove("show");
+        hamburger.classList.remove("active");
+      });
+    });
 
-}
-  
-  /* =========================
-     DESTINATION BUTTONS FIX
-  ========================= */
-  document.querySelectorAll("[data-book-url]").forEach(btn => {
-    btn.addEventListener("click", function () {
-      const url = this.getAttribute("data-book-url");
-      if (url) {
-        window.open(url, "_blank");
+    document.addEventListener("click", function (e) {
+      if (!navMenu.contains(e.target) && !hamburger.contains(e.target)) {
+        navMenu.classList.remove("show");
+        hamburger.classList.remove("active");
       }
     });
-  });
 
-
-  /* =========================
-     FLIGHT FORM → WHATSAPP FIX
-  ========================= */
-  const form = document.getElementById("flightForm");
-
-  if (form) {
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
-
-      const name = form.name.value;
-      const email = form.email.value;
-      const phone = form.phone.value;
-      const departure = form.departure.value;
-      const destination = form.destination.value;
-      const departureDate = form.departure_date.value;
-      const returnDate = form.return_date.value;
-      const passengers = form.passengers.value;
-      const travelClass = form.class.value;
-      const notes = form.notes.value;
-
-      const message =
-`✈️ Flight Booking Request - Dotrief Travels
-
-Name: ${name}
-Email: ${email}
-Phone: ${phone}
-From: ${departure}
-To: ${destination}
-Departure Date: ${departureDate}
-Return Date: ${returnDate}
-Passengers: ${passengers}
-Class: ${travelClass}
-Notes: ${notes}`;
-
-      const whatsappURL = `https://wa.me/2348144967586?text=${encodeURIComponent(message)}`;
-
-      window.open(whatsappURL, "_blank");
-    });
   }
 
 });
