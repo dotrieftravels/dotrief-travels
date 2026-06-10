@@ -3,25 +3,35 @@ document.addEventListener("DOMContentLoaded", function () {
   /* =========================
      BURGER MENU FIX
   ========================= */
-  const hamburger = document.getElementById("hamburger");
-  const navMenu = document.getElementById("nav-menu");
+const hamburger = document.getElementById("hamburger");
+const navMenu = document.getElementById("nav-menu");
 
-  if (hamburger && navMenu) {
-    hamburger.addEventListener("click", function () {
-      navMenu.classList.toggle("show");
-      hamburger.classList.toggle("active");
+if (hamburger && navMenu) {
+
+  hamburger.addEventListener("click", function (e) {
+    e.stopPropagation();
+    navMenu.classList.toggle("show");
+    hamburger.classList.toggle("active");
+  });
+
+  // close when clicking a link
+  document.querySelectorAll("#nav-menu a").forEach(link => {
+    link.addEventListener("click", function () {
+      navMenu.classList.remove("show");
+      hamburger.classList.remove("active");
     });
+  });
 
-    // close menu when clicking links
-    document.querySelectorAll("#nav-menu a").forEach(link => {
-      link.addEventListener("click", function () {
-        navMenu.classList.remove("show");
-        hamburger.classList.remove("active");
-      });
-    });
-  }
+  // close when clicking outside menu
+  document.addEventListener("click", function (e) {
+    if (!navMenu.contains(e.target) && !hamburger.contains(e.target)) {
+      navMenu.classList.remove("show");
+      hamburger.classList.remove("active");
+    }
+  });
 
-
+}
+  
   /* =========================
      DESTINATION BUTTONS FIX
   ========================= */
