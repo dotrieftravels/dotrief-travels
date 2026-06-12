@@ -1,214 +1,142 @@
-/*assets/js/app.js
-Polished consolidated JavaScript for Dotrief Travels
+/* =====================================================
+   Dotrief Travels - app.js
+   Clean Professional JavaScript
+   ===================================================== */
 
-Consolidates duplicate listeners
+document.addEventListener("DOMContentLoaded", () => {
 
-Sets up Travelstart iframe safely (keeps your affiliate params)
+  /* =====================================================
+     1. HAMBURGER MENU (Mobile Navigation)
+     ===================================================== */
 
-Handles hamburger open/close (off-canvas)
+  const hamburger = document.getElementById("hamburger");
+  const navMenu = document.getElementById("nav-menu");
+  const navLinks = document.querySelectorAll(".nav-link");
 
-Handles iframe height messages
+  if (hamburger && navMenu) {
 
-Tracks Book Now clicks and iframe view with gtag
+    // Open / Close Menu
+    hamburger.addEventListener("click", () => {
+      hamburger.classList.toggle("active");
+      navMenu.classList.toggle("show");
 
-Adds destination button redirect logic (use data-book-url attribute)
-Author: Polished by ChatGPT (you can edit labels/IDs if needed)
+      // Accessibility
+      const expanded =
+        hamburger.getAttribute("aria-expanded") === "true";
 
-alert(App.js is connected!");*/
+      hamburger.setAttribute(
+        "aria-expanded",
+        !expanded
+      );
+    });
 
+    // Close menu after clicking a link
+    navLinks.forEach(link => {
+      link.addEventListener("click", () => {
+        hamburger.classList.remove("active");
+        navMenu.classList.remove("show");
+        hamburger.setAttribute("aria-expanded", "false");
+      });
+    });
 
-(function () {
-'use strict';
+    // Close menu when clicking outside
+    document.addEventListener("click", (event) => {
+      const isClickInside =
+        navMenu.contains(event.target) ||
+        hamburger.contains(event.target);
 
-// Wait until DOM is ready
-document.addEventListener('DOMContentLoaded', function () {
+      if (!isClickInside) {
+        hamburger.classList.remove("active");
+        navMenu.classList.remove("show");
+        hamburger.setAttribute("aria-expanded", "false");
+      }
+    });
+  }
 
-/* -------------------------  
-   NAV (Hamburger + off-canvas)  
-   ------------------------- */  
-const hamburger = document.getElementById('hamburger');  
-const navMenu = document.getElementById('nav-menu');  
+  /* =====================================================
+     2. FLIGHT FORM → WHATSAPP REDIRECT
+     ===================================================== */
 
-// defensive guards  
-if (hamburger && navMenu) {  
-  hamburger.addEventListener('click', function () {  
-    navMenu.classList.toggle('show');    // controls CSS .nav-menu.show { right:0 }  
-    hamburger.classList.toggle('active'); // toggles animation to X  
-  });  
+  const flightForm = document.getElementById("flightForm");
 
-  // close menu when clicking a link (improves UX)  
-  navMenu.querySelectorAll('a').forEach(a => {  
-    a.addEventListener('click', () => {  
-      navMenu.classList.remove('show');  
-      hamburger.classList.remove('active');  
-    });  
-  });  
-}  
+  if (flightForm) {
 
-/* -------------------------  
-   TRAVELSTART IFRAME SETUP  
-   ------------------------- */
+    flightForm.addEventListener("submit", function (e) {
+      e.preventDefault();
 
-/*  const iframeId = 'travelstartIframe';
-const iframe = document.getElementById(iframeId);
+      const message = `
+✈️ New Flight Request (Dotrief Travels)
 
-if (iframe) {  
-  // Build URL (keep your affiliate params exactly as before)  
-  const iframeUrlBase = 'https://www.travelstart.com.ng';  
-  const affId = '219440';  
-  const iframeParams = [  
-    'affId=' + affId,  
-    'utm_source=affiliate',  
-    'utm_medium=' + affId,  
-    'isiframe=true',  
-    'iframeVersion=11',  
-    'host=' + encodeURIComponent(window.location.href.split('?')[0])  
-  ];  
-  const newIframeUrl = iframeUrlBase + '/?search=false&' + iframeParams.join('&');  
+👤 Name: ${this.name.value}
+📧 Email: ${this.email.value}
+📱 Phone: ${this.phone.value}
 
-  // Set src (keeps your affiliate)  
-  iframe.setAttribute('src', newIframeUrl);  
+🛫 Departure City: ${this.departure.value}
+🛬 Destination City: ${this.destination.value}
 
-  // Remove the inline 100vh / 100vw behavior so the page scrolls normally:  
-  // (if you want larger iframe on desktop change minHeight below)  
-  iframe.style.width = '100%';  
-  iframe.style.minHeight = '700px'; // comfortable desktop view, user can scroll page  
-  iframe.style.height = 'auto';  
-  iframe.style.border = 'none';  
+📅 Departure Date: ${this.departure_date.value}
+📅 Return Date: ${this.return_date.value || "Not specified"}
 
-  // Hide spinner on ready/load  
-  const hideSpinner = () => {  
-    const spin = document.querySelector('.spin');  
-    if (spin) spin.style.display = 'none';  
-  };  
+👥 Passengers: ${this.passengers.value}
+💺 Travel Class: ${this.class.value}
 
-  iframe.addEventListener('load', hideSpinner);  
-  // If jQuery ready handlers elsewhere expect this, keep a defensive call:  
-  if (window.jQuery) {  
-    window.jQuery(iframe).on('load', hideSpinner);  
-  }  
-}*/  
+📝 Additional Notes:
+${this.notes.value || "No extra notes"}
+      `;
 
-/* -------------------------  
-   IFRAME: listen for postMessage height (Travelstart)  
-   ------------------------- */
+      const whatsappURL =
+        `https://wa.me/2348144967586?text=${encodeURIComponent(message)}`;
 
-/* window.addEventListener('message', function (e) {
-try {
-// Travelstart sends structured messages like [ 'setHeight', heightValue ]
-const data = e.data;
-if (!Array.isArray(data)) return;
-const eventName = data[0];
-const value = data[1];
-if (eventName === 'setHeight' && iframe) {
-// apply height but limit to reasonable max to avoid giant iframe
-const safeHeight = Math.min(Number(value) || 0, 2500);
-if (safeHeight > 0) {
-iframe.style.minHeight = safeHeight + 'px';
-}
-}
-} catch (err) {
-// don't break page on unexpected postMessage
-console.warn('iframe message handler error', err);
-}
-}, false);*/
+      window.open(whatsappURL, "_blank");
 
-/* -------------------------  
-   GTag: record iframe viewed (IntersectionObserver)  
-   ------------------------- */
+      // Optional reset after submission
+      flightForm.reset();
+    });
+  }
 
-/*  if (window.gtag && iframe) {
-const observer = new IntersectionObserver(function (entries) {
-if (entries[0].isIntersecting === true) {
-try {
-gtag('event', 'iframe_viewed', {
-'event_category': 'Booking',
-'event_label': 'Travelstart iframe loaded'
+  /* =====================================================
+     3. DESTINATION BOOK BUTTONS
+     ===================================================== */
+
+  const destinationButtons =
+    document.querySelectorAll("[data-book-url]");
+
+  destinationButtons.forEach(button => {
+
+    button.addEventListener("click", () => {
+
+      const bookingURL =
+        button.getAttribute("data-book-url");
+
+      if (bookingURL) {
+        window.open(bookingURL, "_blank");
+      }
+    });
+  });
+
+  /* =====================================================
+     4. SMOOTH SCROLL FOR NAVIGATION
+     ===================================================== */
+
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+
+    anchor.addEventListener("click", function (e) {
+
+      const targetId =
+        this.getAttribute("href");
+
+      const target =
+        document.querySelector(targetId);
+
+      if (target) {
+        e.preventDefault();
+
+        target.scrollIntoView({
+          behavior: "smooth",
+          block: "start"
+        });
+      }
+    });
+  });
+
 });
-} catch (e) {
-// ignore analytics errors
-}
-// We only need to fire once
-observer.unobserve(entries[0].target);
-}
-}, { threshold: [0] });
-
-observer.observe(iframe);  
-}*/  
-
-/* -------------------------  
-   Book Now / Destination Buttons  
-   - Destination buttons can have data-book-url="https://forms.gle/xxx"  
-   - We also keep the #bookFlight button tracking  
-   ------------------------- */  
-// existing Book Now primary button
-
-/*  const bookBtn = document.getElementById('bookFlight');
-if (bookBtn) {
-bookBtn.addEventListener('click', function (e) {
-// small GA event
-if (window.gtag) {
-try {
-gtag('event', 'iframe_click', {
-'event_category': 'Booking',
-'event_label': 'User clicked Book Now button'
-});
-} catch (err) { /* ignore / }
-}/
-// optionally scroll to booking iframe so desktop users see it instantly
-/* if (iframe) {
-iframe.scrollIntoView({ behavior: 'smooth', block: 'start' });
-}
-});
-}*/
-
-// generic destination buttons (use data attribute in HTML)
-
-/*  document.querySelectorAll('[data-book-url]').forEach(btn => {
-btn.addEventListener('click', function (ev) {
-const url = btn.getAttribute('data-book-url');
-if (!url) return;
-// open in new tab (safer for users)
-window.open(url, '_blank');
-});
-});*/
-
-/* -------------------------  
-   Small helpers / cleanup  
-   ------------------------- */  
-// Remove any accidental duplicated listeners attached to window before (best-effort)  
-// (We can't remove anonymous listeners, but consolidating now is big improvement.)
-
-}); // DOMContentLoaded
-})();
-/<script>
-document.getElementById("flightForm").addEventListener("submit", function(e) {
-e.preventDefault();/
-
-document.addEventListener("DOMContentLoaded", function () {
-const form = document.getElementById("flightForm");
-
-if (form) {
-form.addEventListener("submit", function () {
-
-let message = `✈️ New Flight Request (Dotrief Travels)
-
-Name: ${form.name.value}
-Email: ${form.email.value}
-Phone: ${form.phone.value}
-From: ${form.departure.value}
-To: ${form.destination.value}
-Departure: ${form.departure_date.value}
-Return: ${form.return_date.value}
-Passengers: ${form.passengers.value}
-Class: ${form.class.value}
-Notes: ${form.notes.value}`;
-
-let whatsappURL = `https://wa.me/+2348144967586?text=${encodeURIComponent(message)}`;  
-
-  window.open(whatsappURL, "_blank");  
-});
-
-}
-});
-
