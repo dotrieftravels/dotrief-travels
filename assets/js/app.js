@@ -1,4 +1,4 @@
-/* assets/js/app.js
+/*assets/js/app.js
 Polished consolidated JavaScript for Dotrief Travels
 
 Consolidates duplicate listeners
@@ -13,8 +13,8 @@ Tracks Book Now clicks and iframe view with gtag
 
 Adds destination button redirect logic (use data-book-url attribute)
 Author: Polished by ChatGPT (you can edit labels/IDs if needed)
-*/
-alert(App.js is connected!");
+
+alert(App.js is connected!");*/
 
 
 (function () {
