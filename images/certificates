@@ -1,0 +1,122 @@
+Never upload images like:
+
+IMG_001.jpg
+photo.png
+Screenshot12.jpeg
+
+Instead use descriptive names:
+
+dotrief-travels-logo.png
+
+dorcas-osawaru-founder.jpg
+
+flight-booking-nigeria.jpg
+
+study-abroad-germany.jpg
+
+visa-assistance-nigeria.jpg
+
+work-abroad-opportunities.jpg
+
+dubai-vacation-package.jpg
+
+canada-study-abroad.jpg
+
+
+Every image should describe the image naturally.
+
+Examples:
+
+Logo
+alt="Dotrief Travels logo"
+Flight
+alt="International flight booking services by Dotrief Travels
+
+
+Study Abroad
+alt="Study abroad counselling for Nigerian students"
+Visa
+alt="Visa assistance services by Dotrief Travels"
+
+Avoid keyword stuffing like:
+
+travel agency Nigeria travel agency Lagos flight booking visa travel...
+
+Google doesn't like that.
+
+Part 3D — Image Dimensions
+
+To keep the website fast, use consistent sizes.
+
+Hero Images
+1920 × 1080
+Service Images
+800 × 600
+Blog Images
+1200 × 630
+
+This size is also excellent for Facebook and LinkedIn sharing.
+
+Founder Photo
+700 × 900
+
+Portrait orientation works well.
+
+Logo
+
+PNG with transparent background.
+
+Part 3E — Image Compression
+
+Before uploading any image:
+
+Compress it.
+
+Aim for:
+
+Hero images: under 300 KB
+Service images: under 150 KB
+Logos/icons: under 50 KB
+
+This improves page speed significantly.
+
+Part 3F — Lazy Loading
+
+Continue using:
+
+loading="lazy"
+
+for images that are below the fold (not immediately visible when the page loads).
+
+Part 3G — Founder Profile Photos
+
+Because we have a dedicated founder section, I recommend having three professional photos ready:
+
+Formal business portrait
+Website About page
+LinkedIn
+Press releases
+Speaking/meeting photo
+Builds trust
+Great for presentations and partnerships
+Travel-related professional photo
+Suitable for marketing materials and social media
+
+This is common on professional company websites where leadership is part of the brand.
+
+Part 3H — Trust Badges
+
+Earlier, we discussed NANTA.
+
+I also recommend preparing high-quality versions of:
+
+NANTA membership badge
+CAC certificate/logo (where appropriate)
+British Certified Education Agent certificate (if permitted for display)
+Amadeus certification badge (if usage rights allow)
+
+These should go in:
+
+images/certificates/
+
+They add credibility when used appropriately.
