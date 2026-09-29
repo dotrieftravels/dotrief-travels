@@ -179,6 +179,24 @@ color:#ffd700;
 HEADER BUTTONS
 ========================== */
 
+.small-hero{
+
+height:420px;
+background:url("../images/about-bannerpng") center center/cover no-repeat;
+position:relative;
+
+}
+
+.small-hero .hero-overlay{
+
+position:absolute;
+inset:0;
+background:rgba(0,0,0,.55);
+
+}
+
+
+
 
 .header-buttons{
 
