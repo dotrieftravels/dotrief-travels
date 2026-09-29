@@ -147,8 +147,7 @@ DESKTOP NAVIGATION
 .navbar ul{
 
 display:flex;
-align-items:center;
-justify-content: center;
+flex-direction: column;
 gap:25px;
 list-style:none;
 margin: 0;
